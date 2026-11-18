@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikola Pejcic — Design Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d1d1f;--muted:#8a8a8f;--mark:#5f6064;--accent:#e6007e;--pink:#ffc6e7;--line:#cfcfd4}
+*{box-sizing:border-box}
+body{margin:0;font-family:Roboto,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.page{display:grid;grid-template-columns:minmax(380px,480px) 1fr;gap:clamp(32px,6vw,92px);max-width:1680px;margin:0 auto;padding:0 48px}
+.sidebar{padding:48px 0 64px}
+.logo{display:flex;align-items:flex-end;gap:4px;font-weight:900;font-size:64px;line-height:.8;color:var(--mark);padding-bottom:28px;border-bottom:1px solid var(--line)}
+.logo:hover{text-decoration:none}
+.logo i{width:14px;height:14px;display:inline-block}
+.logo i:nth-of-type(1){background:var(--accent)} .logo i:nth-of-type(2){background:#ff7cc4} .logo i:nth-of-type(3){background:var(--pink)}
+.intro{font-size:14.5px;line-height:1.6;margin-top:28px}
+.intro p{margin:0 0 16px}
+.intro .lead{font-size:19px;font-weight:500;line-height:1.35}
+.sidebar h2{font-size:15px;font-weight:500;margin:40px 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{font-size:14px;line-height:1.4;padding:6px 0 6px 18px;position:relative;color:var(--muted)}
+.sidebar li::before{content:"";position:absolute;left:2px;top:11px;border-left:6px solid #b8b8bd;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.sidebar li.on::before{border-left-color:var(--accent)}
+.sidebar li.on a{font-weight:500}
+.contact{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.9}
+.contact a{display:block}
+.main{position:sticky;top:0;height:100vh;display:grid;place-items:center}
+.main svg{width:min(100%,640px);height:auto}
+@media (max-width:860px){
+  .page{grid-template-columns:1fr;padding:0 24px}
+  .main{position:static;height:auto;order:-1;padding-top:24px}
+  .main svg{width:min(100%,380px)}
+  .sidebar{padding-top:8px}
+  .logo{font-size:48px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="logo" href="index.html" aria-label="Nikola Pejcic, home">N<i></i><i></i><i></i></a>
+    <div class="intro">
+      <p class="lead">I build the systems that let teams do their best design work.</p>
+      <p>Design systems, AI-powered tools, strong teams, and the practices that bring them together.</p>
+      <p>Over 15 years in product design, I've worked on complex B2B software across a range of industries. I spent nine years at Nulogy, growing from Product Designer to Product Design Manager, where I built and evolved design systems, developed the design practice, and led a multidisciplinary team.</p>
+    </div>
+    <nav aria-label="Work">
+<h2>Process</h2><ul><li>Discovery and design process</li><li>UX maturity</li><li>Data driven design / UX metrics</li><li>AI driven processes</li><li>Institutionalize iterative UX design process</li><li>Design excellence through quality standards</li></ul>
+<h2>Team</h2><ul><li>Established competency levels and career progression model</li><li>Defined teams structure</li><li>Coaching and mentoring</li><li>Recruiting</li><li>Onboarding</li><li>Reduced traction</li><li>Established personal relationship</li></ul>
+<h2>Vision and direction</h2><ul><li>Principles and standards</li><li>Harmonization projects</li><li>Unified navigation and platform IA</li><li>Design patterns</li><li>Concept car</li></ul>
+<h2>Infrastructure</h2><ul><li class="on"><a href="work/spark-ui.html">Design system</a></li><li>Research repo</li><li>Roles repo</li><li>Design engineering and UX writing</li></ul>
+<h2>Craft</h2><ul><li>End to end design and development</li><li>User research</li><li>Usability testing</li></ul>
+    </nav>
+    <div class="contact">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="https://www.linkedin.com/in/your-handle/">LinkedIn</a>
+      <a href="resume.pdf">Resume (PDF)</a>
+    </div>
+  </aside>
+  <main class="main" aria-hidden="true">
+    <svg viewBox="120 -205 450 380" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="143.4,70.0 204.0,105.0 204.0,15.0 143.4,-20.0" fill="#eef2a8"/><polygon points="238.7,85.0 204.0,105.0 204.0,15.0 238.7,-5.0" fill="#f3f6c0"/><polygon points="178.0,-40.0 238.7,-5.0 204.0,15.0 143.4,-20.0" fill="#f8fad6"/>
+          <polygon points="195.4,60.0 230.0,80.0 230.0,-150.0 195.4,-170.0" fill="#ffb3df"/><polygon points="264.6,60.0 230.0,80.0 230.0,-150.0 264.6,-170.0" fill="#ffc6e7"/><polygon points="230.0,-190.0 264.6,-170.0 230.0,-150.0 195.4,-170.0" fill="#ffd6ee"/>
+          <g transform="translate(0,-85)"><polygon points="459.5,117.5 498.5,140.0 498.5,95.0 459.5,72.5" fill="#ffb3df"/><polygon points="537.4,117.5 498.5,140.0 498.5,95.0 537.4,72.5" fill="#ffc6e7"/><polygon points="498.5,50.0 537.4,72.5 498.5,95.0 459.5,72.5" fill="#ffd6ee"/></g>
+          <g transform="matrix(0.866,0.5,-0.866,0.5,288,22)" font-family="Roboto, sans-serif">
+            <text x="0" y="0" font-size="34" font-weight="700" letter-spacing="5" fill="#8e8e93">nikola pejcic</text>
+            <text x="2" y="22" font-size="14" letter-spacing="5" fill="#a5a5aa">design leader</text>
+          </g>
+        </svg>
+  </main>
+</div>
+</body>
+</html>

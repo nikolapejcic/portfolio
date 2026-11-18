@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From NDS to Spark UI — Nikola Pejcic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html" aria-label="Nikola Pejcic, home">N<i></i><i></i><i></i></a>
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#practice">Practice</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="cs-hero">
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← All work</a>
+      <p class="eyebrow">Case study · Design systems · Nulogy</p>
+      <h1>From NDS to Spark UI: two generations of design system, and a platform rebuilt in a month</h1>
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Design System Designer → Design Manager; architect of Spark UI</dd></div>
+        <div><dt>Timeline</dt><dd>2018–2026</dd></div>
+        <div><dt>Team</dt><dd>2 designers, 1–2 developers (NDS); 1 front-end specialist (Spark UI)</dd></div>
+        <div><dt>Adopted by</dt><dd>3–4 product teams (NDS); the new unified platform (Spark UI)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cs-body">
+    <div class="wrap">
+      <nav class="toc" aria-label="On this page">
+        <a href="#context">Context</a>
+        <a href="#nds">Building NDS</a>
+        <a href="#setbacks">Setbacks</a>
+        <a href="#spark">Spark UI</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#learned">What I learned</a>
+      </nav>
+
+      <article>
+        <h2 id="context">Context</h2>
+        <p>Nulogy's product teams build complex supply-chain and manufacturing software, but they had little front-end expertise. Every screen was built from scratch, and design patterns drifted from product to product.</p>
+        <p>I was hired in 2017 as a product designer, with the goal of later starting a Design Ops practice that didn't exist yet. Its first big project was a design system.</p>
+
+        <h2 id="nds">Building NDS</h2>
+        <p>The Nulogy Design System (NDS) was meant to package front-end expertise so developers barely had to do any front-end work. The Design Ops team was me, another design system designer and 1–2 developers. We built a solid base version first. The next phase was adoption: we planned to embed developers in product teams as NDS advocates.</p>
+        <div class="figure">[ Image: NDS components / docs site ]</div>
+
+        <h2 id="setbacks">Setbacks</h2>
+        <p>A company restructuring took away the people the adoption plan relied on. Supplier Collaboration and Connect adopted NDS fully. Shop Floor only partly did, because it wasn't built on React; it needed a CSS fallback version that we no longer had the people to build.</p>
+        <p>When the other designer left, Design Ops was paused and I moved into the Design Manager role. Product team members who had invested in NDS kept it running for years, with no new improvements. Around 2025 we revived it with a design engineer to pay down technical debt, but another company change paused it again.</p>
+        <div class="callout"><strong>Pull quote / key insight:</strong> <span class="placeholder">e.g. "A design system's real risk isn't the build. It's the adoption plan depending on people the org can take away."</span></div>
+
+        <h2 id="spark">Spark UI</h2>
+        <p>In early 2026 Nulogy decided to merge most of its products into one new product, rebuilt from scratch. Starting in March, I planned and architected both the design and front end of a new design system, Spark UI. It became a comprehensive system in about a month, and a front-end specialist joined a few weeks in to speed things up.</p>
+        <p><span class="placeholder">Add: key architecture decisions, what you carried over from NDS, what you deliberately did differently, the role of AI tooling, if any.</span></p>
+        <div class="figure">[ Image: Spark UI components / tokens ]</div>
+
+        <h2 id="outcomes">Outcomes</h2>
+        <div class="stat-row">
+          <div class="stat"><b>~50%+</b><span>less UI build time on Supplier Collaboration (team estimate)</span></div>
+          <div class="stat"><b>~1 month</b><span>to a comprehensive Spark UI</span></div>
+          <div class="stat"><b>All but 1</b><span>products now on Spark UI via the unified platform</span></div>
+        </div>
+        <p>NDS made design patterns consistent across the products that adopted it. Repeated patterns took a fraction of the time to build compared with designing every screen from scratch.</p>
+
+        <h2 id="learned">What I learned</h2>
+        <p><span class="placeholder">2–3 short lessons, e.g. design adoption to survive org changes; ship a framework-agnostic layer early; treat the system as a product with an owner.</span></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Nikola Pejcic</div></footer>
+</body>
+</html>
