@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers config: serves v2-figma behind a login.
+  "name": "portfolio",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./v2-figma",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "vars": { "SITE_USER": "guest" },
+  "keep_vars": true
+}

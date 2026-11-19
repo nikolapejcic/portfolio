@@ -2,9 +2,10 @@
 
 Last updated: 2026-11-19
 
-Hosting: Cloudflare Pages (free), code in a private GitHub repo.
-Only the `v2-figma` folder is published. `functions/_middleware.js` asks for a
-username and password before any page or image loads.
+Hosting: Cloudflare Workers (free), code in a private GitHub repo.
+Only the `v2-figma` folder is published (see `wrangler.jsonc`). `worker/index.js`
+asks for a username and password before any page or image loads.
+(`functions/_middleware.js` is the same gate for the older Cloudflare Pages setup.)
 
 ## One-time setup (about 10 minutes)
 
@@ -18,23 +19,15 @@ username and password before any page or image loads.
    git push -u origin main
    ```
 
-### 2. Connect Cloudflare Pages
-1. Sign up at dash.cloudflare.com (free).
-2. Workers & Pages → Create → Pages → **Connect to Git** → pick `portfolio`.
-3. Build settings:
-   - Framework preset: **None**
-   - Build command: *(leave empty)*
-   - Build output directory: **v2-figma**
-   - Root directory: *(leave empty)*
-4. Environment variables (Production), add both and mark the password **Encrypt**:
-   - `SITE_USER` = `guest`
-   - `SITE_PASS` = *(the password; not stored in this repo)*
-5. Save and Deploy. The site gets an address like `portfolio-xyz.pages.dev`.
+### 2. Connect Cloudflare (Workers)
+1. dash.cloudflare.com → Workers & Pages → Create → Import a repository → `portfolio`.
+2. Build command: *(leave empty)*. Deploy command: `npx wrangler deploy` (default).
+3. Deploy. The first visit shows "Site login is not configured" until step 3.
 
-### 3. Fail closed (important)
-Settings → Functions → set the daily-limit behaviour to **Fail closed**.
-Otherwise, if the free daily limit (100,000 requests) is ever used up,
-the login check is skipped and the site opens to anyone.
+### 3. Add the password
+Project → Settings → Variables and Secrets → Add → type **Secret**:
+`SITE_PASS` = *(the password; not stored in this repo)*. `SITE_USER` (guest) is already in `wrangler.jsonc`.
+When the free daily limit (100,000 requests) is used up, the site stops serving; it never opens without the login.
 
 ### 4. Check it
 - Open the .pages.dev address in a private window: it should ask for a login.
@@ -42,5 +35,5 @@ the login check is skipped and the site opens to anyone.
 
 ## Day to day
 - Edit, then `git add -A && git commit -m "…" && git push`. Cloudflare redeploys in about a minute.
-- Change the password: Cloudflare → project → Settings → Variables → edit `SITE_PASS` → redeploy.
+- Change the password: Cloudflare → project → Settings → Variables and Secrets → edit `SITE_PASS`.
 - Optional: add your own domain under Custom domains.
