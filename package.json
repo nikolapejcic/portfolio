@@ -4,7 +4,7 @@
   "private": true,
   "description": "Local portfolio site with two versions (v1-cards, v2-figma) and live reload.",
   "scripts": {
-    "dev": "browser-sync start --server --port 3000 --files \"**/*.html\" \"**/*.css\" \"**/*.js\" \"!node_modules/**\" --no-notify --no-ui"
+    "dev": "browser-sync start --server --port 3000 --files \"**/*.html\" \"**/*.css\" \"**/*.js\" \"!node_modules/**\" --no-notify --no-ui --no-ghost-mode"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4"

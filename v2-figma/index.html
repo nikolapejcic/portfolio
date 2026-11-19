@@ -6,73 +6,570 @@
 <title>Nikola Pejcic — Design Leader</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#1d1d1f;--muted:#8a8a8f;--mark:#5f6064;--accent:#e6007e;--pink:#ffc6e7;--line:#cfcfd4}
-*{box-sizing:border-box}
-body{margin:0;font-family:Roboto,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-.page{display:grid;grid-template-columns:minmax(380px,480px) 1fr;gap:clamp(32px,6vw,92px);max-width:1680px;margin:0 auto;padding:0 48px}
-.sidebar{padding:48px 0 64px}
-.logo{display:flex;align-items:flex-end;gap:4px;font-weight:900;font-size:64px;line-height:.8;color:var(--mark);padding-bottom:28px;border-bottom:1px solid var(--line)}
-.logo:hover{text-decoration:none}
-.logo i{width:14px;height:14px;display:inline-block}
-.logo i:nth-of-type(1){background:var(--accent)} .logo i:nth-of-type(2){background:#ff7cc4} .logo i:nth-of-type(3){background:var(--pink)}
-.intro{font-size:14.5px;line-height:1.6;margin-top:28px}
-.intro p{margin:0 0 16px}
-.intro .lead{font-size:19px;font-weight:500;line-height:1.35}
-.sidebar h2{font-size:15px;font-weight:500;margin:40px 0 12px}
-.sidebar ul{list-style:none;margin:0;padding:0}
-.sidebar li{font-size:14px;line-height:1.4;padding:6px 0 6px 18px;position:relative;color:var(--muted)}
-.sidebar li::before{content:"";position:absolute;left:2px;top:11px;border-left:6px solid #b8b8bd;border-top:4px solid transparent;border-bottom:4px solid transparent}
-.sidebar li.on::before{border-left-color:var(--accent)}
-.sidebar li.on a{font-weight:500}
-.contact{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.9}
-.contact a{display:block}
-.main{position:sticky;top:0;height:100vh;display:grid;place-items:center}
-.main svg{width:min(100%,640px);height:auto}
-@media (max-width:860px){
-  .page{grid-template-columns:1fr;padding:0 24px}
-  .main{position:static;height:auto;order:-1;padding-top:24px}
-  .main svg{width:min(100%,380px)}
-  .sidebar{padding-top:8px}
-  .logo{font-size:48px}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Big+Shoulders+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<div class="page">
-  <aside class="sidebar">
-    <a class="logo" href="index.html" aria-label="Nikola Pejcic, home">N<i></i><i></i><i></i></a>
-    <div class="intro">
-      <p class="lead">I build the systems that let teams do their best design work.</p>
-      <p>Design systems, AI-powered tools, strong teams, and the practices that bring them together.</p>
-      <p>Over 15 years in product design, I've worked on complex B2B software across a range of industries. I spent nine years at Nulogy, growing from Product Designer to Product Design Manager, where I built and evolved design systems, developed the design practice, and led a multidisciplinary team.</p>
-    </div>
-    <nav aria-label="Work">
-<h2>Process</h2><ul><li>Discovery and design process</li><li>UX maturity</li><li>Data driven design / UX metrics</li><li>AI driven processes</li><li>Institutionalize iterative UX design process</li><li>Design excellence through quality standards</li></ul>
-<h2>Team</h2><ul><li>Established competency levels and career progression model</li><li>Defined teams structure</li><li>Coaching and mentoring</li><li>Recruiting</li><li>Onboarding</li><li>Reduced traction</li><li>Established personal relationship</li></ul>
-<h2>Vision and direction</h2><ul><li>Principles and standards</li><li>Harmonization projects</li><li>Unified navigation and platform IA</li><li>Design patterns</li><li>Concept car</li></ul>
-<h2>Infrastructure</h2><ul><li class="on"><a href="work/spark-ui.html">Design system</a></li><li>Research repo</li><li>Roles repo</li><li>Design engineering and UX writing</li></ul>
-<h2>Craft</h2><ul><li>End to end design and development</li><li>User research</li><li>Usability testing</li></ul>
-    </nav>
-    <div class="contact">
-      <a href="mailto:you@example.com">you@example.com</a>
-      <a href="https://www.linkedin.com/in/your-handle/">LinkedIn</a>
-      <a href="resume.pdf">Resume (PDF)</a>
-    </div>
-  </aside>
-  <main class="main" aria-hidden="true">
-    <svg viewBox="120 -205 450 380" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="143.4,70.0 204.0,105.0 204.0,15.0 143.4,-20.0" fill="#eef2a8"/><polygon points="238.7,85.0 204.0,105.0 204.0,15.0 238.7,-5.0" fill="#f3f6c0"/><polygon points="178.0,-40.0 238.7,-5.0 204.0,15.0 143.4,-20.0" fill="#f8fad6"/>
-          <polygon points="195.4,60.0 230.0,80.0 230.0,-150.0 195.4,-170.0" fill="#ffb3df"/><polygon points="264.6,60.0 230.0,80.0 230.0,-150.0 264.6,-170.0" fill="#ffc6e7"/><polygon points="230.0,-190.0 264.6,-170.0 230.0,-150.0 195.4,-170.0" fill="#ffd6ee"/>
-          <g transform="translate(0,-85)"><polygon points="459.5,117.5 498.5,140.0 498.5,95.0 459.5,72.5" fill="#ffb3df"/><polygon points="537.4,117.5 498.5,140.0 498.5,95.0 537.4,72.5" fill="#ffc6e7"/><polygon points="498.5,50.0 537.4,72.5 498.5,95.0 459.5,72.5" fill="#ffd6ee"/></g>
-          <g transform="matrix(0.866,0.5,-0.866,0.5,288,22)" font-family="Roboto, sans-serif">
-            <text x="0" y="0" font-size="34" font-weight="700" letter-spacing="5" fill="#8e8e93">nikola pejcic</text>
-            <text x="2" y="22" font-size="14" letter-spacing="5" fill="#a5a5aa">design leader</text>
-          </g>
-        </svg>
-  </main>
+
+<!-- Intro illustration (only on the intro view) -->
+<div class="hero" aria-hidden="true">
+  <div class="name"><img src="img/hero-name.svg" alt=""></div>
+  <div class="g1"><img src="img/hero-group1.svg" alt=""></div>
+  <div class="g2"><img src="img/hero-group2.svg" alt=""></div>
+  <div class="g3"><img src="img/hero-group3.svg" alt=""></div>
 </div>
+
+<aside class="sidebar">
+  <div class="logo-bar">
+    <div class="wrap"><a class="logo" href="#" aria-label="Nikola Pejcic, home"><img src="img/logo.svg" alt=""></a></div>
+    <div class="line"></div>
+    <div class="fade"></div>
+  </div>
+  <div class="side-scroll scroll">
+    <div class="side-inner">
+      <div class="intro"><div>
+        <p>I build the systems that let teams do their best design work.</p>
+        <p>Design systems, AI-powered tools, strong teams, and the practices that bring them together.</p>
+        <p>Over 15 years in product design, I've worked on complex B2B software across a range of industries. I spent nine years at Nulogy, growing from Product Designer to Product Design Manager, where I built and evolved design systems, developed the design practice, and led a multidisciplinary team.</p>
+      </div></div>
+      <nav class="sections" aria-label="Work">
+        <section class="section case-studies" aria-label="Case studies"><ul>
+          <li><a class="item" href="#spark-ui"><span>Spark UI design system</span></a></li>
+          <li><a class="item" href="#design-sandbox"><span>Design Sandbox: prompt to prototype</span></a></li>
+          <li><a class="item" href="#nds"><span>Nulogy Design System (NDS)</span></a></li>
+          <li><a class="item" href="#knowledge-articles"><span>AI-assisted knowledge articles</span></a></li>
+          <li><a class="item" href="#discovery-process"><span>Discovery and design process</span></a></li>
+          <li><a class="item" href="#ux-maturity"><span>UX maturity</span></a></li>
+          <li><a class="item" href="#ux-metrics"><span>Data driven design / UX metrics</span></a></li>
+        </ul></section>
+        <section class="section"><h2>Process</h2><ul>
+          <li><span class="item">AI driven processes</span></li>
+          <li><span class="item wip">Institutionalize iterative UX design process</span></li>
+          <li><span class="item wip">Design excellence through quality standards</span></li>
+        </ul></section>
+        <section class="section"><h2>Team</h2><ul>
+          <li><span class="item">Established competency levels and career progression model</span></li>
+          <li><span class="item">Defined teams structure</span></li>
+          <li><span class="item">Coaching and mentoring</span></li>
+          <li><span class="item">Recruiting</span></li>
+          <li><span class="item">Onboarding</span></li>
+          <li><span class="item">Reduced traction</span></li>
+          <li><span class="item">Established personal relationship</span></li>
+        </ul></section>
+        <section class="section"><h2>Vision and direction</h2><ul>
+          <li><span class="item">Principles and standards</span></li>
+          <li><span class="item">Harmonization projects</span></li>
+          <li><span class="item">Unified navigation and platform IA</span></li>
+          <li><span class="item">Design patterns</span></li>
+          <li><span class="item">Concept car</span></li>
+        </ul></section>
+        <section class="section"><h2>Infrastructure</h2><ul>
+          <li><span class="item">Research repo</span></li>
+          <li><span class="item">Roles repo</span></li>
+          <li><span class="item">Design engineering and UX writing</span></li>
+        </ul></section>
+        <section class="section"><h2>Craft</h2><ul>
+          <li><span class="item">End to end design and development</span></li>
+          <li><span class="item">User research</span></li>
+          <li><span class="item">Usability testing</span></li>
+        </ul></section>
+      </nav>
+      <div class="contact">
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/nikolapejcic" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 0 0-4 0"/></svg></a>
+          <a href="#" aria-label="GitHub (personal)" title="GitHub (personal) — link to come"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+          <a class="nl-badge" href="https://github.com/nikola-nulogy" target="_blank" rel="noopener" aria-label="My Nulogy GitHub" title="My Nulogy GitHub (nikola-nulogy)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg><span class="nb" aria-hidden="true"><span class="nulogy-mark"></span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+
+  <!-- Page 1 -->
+  <article class="article scroll draft cs" id="design-sandbox">
+    <div class="article-inner">
+      <h1>Design Sandbox: from design intent to a <em>working prototype</em></h1>
+      <p>A prompt-to-prototype tool. Describe a page or paste a screenshot, and Claude Code builds a working prototype from Spark UI's components, recipes, templates and rules. Designers and PMs use it to validate concepts, run usability tests and hand off to developers.</p>
+      <figure class="cs-art"><img src="img/art-sandbox.svg" alt=""></figure>
+      <dl class="facts"><div class="span2"><dt>Outcome</dt><dd><mark class="tbd">[TBD]</mark></dd></div><div><dt>Role</dt><dd><mark class="tbd">[TBD]</mark></dd></div><div><dt>Team</dt><dd><mark class="tbd">[TBD]</mark></dd></div><div><dt>Timeline</dt><dd>2026 <mark class="tbd">[TBD: months]</mark></dd></div><div><dt>Built with</dt><dd>Claude Code (skills and subagents), React, Vite, Spark UI</dd></div></dl>
+      <h2>The challenge</h2>
+      <p><mark class="tbd">[TBD: how prototyping and specs worked before, and what hurt.]</mark></p>
+      <p>Spark UI was built so AI could make the same choices a designer would. The Sandbox puts that to work.</p>
+      <h2>How it works</h2>
+      <div class="p"><ol class="steps"><li><strong>Describe or paste</strong> Users describe a page, its layout, actions and labels, or paste a screenshot.</li><li><strong>Claude Code builds it</strong> A prototyping skill generates a working React prototype from Spark UI. Users never see the code.</li><li><strong>Spark UI is the knowledge base</strong> The skill is kept light: the design system's own documentation tells the AI what to use, and the skill warns users when a request breaks a design rule.</li></ol></div>
+      <h2>Beyond the prototype</h2>
+      <div class="p"><ul><li><strong>Configuration knobs:</strong> anyone viewing a prototype can switch it into specific application states, replacing long written specs. Also useful for testing.</li><li><strong>Acceptance criteria:</strong> a shared space where designers and PMs write them together for handoff.</li><li><strong>Developer-ready code:</strong> developers can copy the generated JSX.</li><li><strong>Design system gaps:</strong> a section that flags where the request needed something Spark UI didn't have yet.</li></ul></div>
+      <h2>In use</h2>
+      <p>Designers use it for concept validation and usability testing; PMs are experimenting with it. It replaced Figma for prototyping.</p>
+      <p><mark class="tbd">[TBD: one concrete story: a prototype that led to a test or decision]</mark> <mark class="tbd">[TBD: numbers: users, prototypes, time saved]</mark></p>
+      <h2>Where it came from</h2>
+      <p><mark class="tbd">[TBD: decide whether to include]</mark> A summer 2025 hackathon: with a designer and a design engineer, I built an AI prototyping tool on the old design system. It won out of about 12 teams and became the proof of concept for the Sandbox.</p>
+      <h2>What I learned</h2>
+      <p><mark class="tbd">[TBD: limits, failures, surprises]</mark></p>
+      <p>→ Related: Spark UI · Nulogy Design System (NDS)</p>
+    </div>
+  </article>
+  <article class="article scroll draft cs" id="nds">
+    <div class="article-inner">
+      <h1>Nulogy Design System: front-end expertise for <em>every product team</em></h1>
+      <p>Nulogy's first design system, built from scratch in 2018. I researched, designed and documented its components and their APIs, and later led the effort to keep it alive with a much leaner team.</p>
+      <figure class="cs-art"><img src="img/art-nds.svg" alt=""></figure>
+      <dl class="facts"><div><dt>Role</dt><dd>Design system designer (2018–2021); design system lead (2024–2025) <mark class="tbd">[TBD: confirm dates and whether 2024–2025 is in scope]</mark></dd></div><div><dt>Team</dt><dd>Me, a second design system designer and 1–2 developers</dd></div><div><dt>Timeline</dt><dd>2018–2021 <mark class="tbd">[TBD: or 2018–2025]</mark></dd></div><div><dt>Built with</dt><dd>React, styled-components, Figma</dd></div><div><dt>Links</dt><dd>nulogy.design · GitHub <mark class="tbd">[TBD: which repos to link]</mark></dd></div></dl>
+      <h2>The challenge</h2>
+      <p>Nulogy's product teams had no front-end expertise. Every team was solving the same interface problems on its own, with inconsistent results. NDS was the first project of a new DesignOps practice: package that expertise once, so developers could build consistent, accessible screens with minimal front-end work.</p>
+      <h2>What I did</h2>
+      <div class="p"><ul><li><strong>Researched every component:</strong> best practices and accessibility, before designing anything.</li><li><strong>Audited Nulogy's applications</strong> to see how each pattern was actually used.</li><li><strong>Designed the components and their APIs,</strong> and built some of them.</li><li><strong>Wrote thorough documentation</strong> for designers and developers, published on nulogy.design.</li></ul></div>
+      <p>The first version took about six months with a team of four, and met WCAG AA.</p>
+      <p><mark class="tbd">[TBD: one concrete story, e.g. research that changed a component, or a key design decision]</mark></p>
+      <h2>Adoption</h2>
+      <p>Supplier Collaboration and Connect adopted NDS fully. Shop Floor adopted it only partly: it wasn't on React, NDS was React-first, and the CSS fallback that would have covered it never got built.</p>
+      <p><mark class="tbd">[TBD: component count from nulogy.design; any other numbers]</mark></p>
+      <h2>Keeping it alive with less (2024–2025)</h2>
+      <p>Over the years, investment stopped and started, and the team shrank. When I returned to it as lead, I owned the backlog and the processes: how the system team worked with product teams, a component request process, and design reviews where designers justified going off-system. Justified gaps either became part of the system or local components in a team's Storybook.</p>
+      <p>With a much leaner team, the governance model changed: we opened the system to outside contributions and actively encouraged them, instead of building everything centrally. When the design team shrank further, we dropped the Figma library: two sources of truth couldn't be maintained.</p>
+      <p><mark class="tbd">[TBD: what changed because of these processes]</mark></p>
+      <h2>What it taught me</h2>
+      <p>These lessons shaped Spark UI:</p>
+      <div class="p"><ul><li><strong>One source of truth.</strong> A Figma library and a code library drift apart when a team is small.</li><li><strong>Don't tie the system to one technology.</strong> React-first meant Shop Floor was left out.</li><li><strong>Plan for lean years.</strong> A system needs to survive changes in investment.</li></ul></div>
+      <p>→ Next: Spark UI case study</p>
+    </div>
+  </article>
+  <article class="article scroll draft cs" id="knowledge-articles">
+    <div class="article-inner">
+      <h1><em>AI-assisted</em> knowledge articles</h1>
+      <p>When Nulogy's technical writers were gone, writing help articles fell to my design team. I built a Claude Code workflow that gathers the context, drafts the article and sets it up in Zendesk, so designers spend their time reviewing, not writing.</p>
+      <figure class="cs-art"><img src="img/art-knowledge.svg" alt=""></figure>
+      <dl class="facts"><div class="span2"><dt>Outcome</dt><dd>several hours per article down to under one</dd></div><div><dt>Role</dt><dd>Product Design Manager; designed and built the workflow</dd></div><div><dt>Team</dt><dd>Me <mark class="tbd">[TBD: anyone else involved?]</mark></dd></div><div><dt>Timeline</dt><dd><mark class="tbd">[TBD: months, 2025?]</mark></dd></div><div><dt>Built with</dt><dd>Claude Code (skills and agents), Zendesk</dd></div></dl>
+      <h2>The challenge</h2>
+      <p>The technical writers were gone <mark class="tbd">[TBD: when, and how; earlier a writer worked with the team on a dotted line]</mark>, and help articles still had to ship with every feature. Designers took over. A smaller feature's article took a designer several hours, most of it spent hunting for context spread across tools.</p>
+      <h2>How it works</h2>
+      <div class="p"><ol class="steps"><li><strong>Gather</strong> An agent pulls the context from six sources: Confluence, Jira, Slack, GitHub (code before and after the change), existing Zendesk articles and Zoom transcripts.</li><li><strong>Draft</strong> A writing skill drafts the article using rules for article type, structure and destination.</li><li><strong>Review</strong> Drafts are saved locally for a person to review and correct.</li><li><strong>Publish</strong> A publishing agent creates the configured draft in Zendesk. Only the publish click is left.</li></ol></div>
+      <p><em class="muted">(Visual: four-step flow, sources on the left, Zendesk on the right.)</em></p>
+      <h2>Results</h2>
+      <div class="p"><ul><li><strong>Under 1 hour per article,</strong> down from several hours. Almost all of the remaining time is human review.</li><li><strong>About 20 articles</strong> in about six months, on one team.</li><li><strong>Roughly 60 hours saved</strong> (estimate).</li><li><strong>Beyond design,</strong> it helps the entire product development practice.</li></ul></div>
+      <h2>What I learned</h2>
+      <p>Claude drafts and structures well, and it doesn't make things up when it has the sources. What it can't do well is judge what matters most to the reader. That's why the human review step stays, and why the time saved went into review, not into skipping it.</p>
+      <p><mark class="tbd">[TBD: anything else that surprised you?]</mark></p>
+      <h2>What's next</h2>
+      <p>It was a proof of concept. Extending it to in-app copy was planned, but Spark UI took priority.</p>
+      <p>→ Related: Spark UI · Design Sandbox</p>
+    </div>
+  </article>
+  <article class="article scroll" id="discovery-process">
+    <div class="article-inner">
+      <h1>Establishing <em>discovery and design</em> process</h1>
+      <p>During 2022, I worked on establishing standardized discovery and design processes across the product development lifecycle at Nulogy. This effort involved establishing the process, training and onboarding product management and design team members, building infrastructure to support the process, enforcing discipline in maintaining the system, and promoting the process across the organization. The essence of the process is captured in the chart below.</p>
+      <figure class="thumb" style="margin:0">
+        <button class="img" data-zoom="img/discovery-process.png" data-mode="wide" aria-label="Zoom: Process overview"><div class="crop"><img src="img/discovery-process.png" alt="Discovery and design process chart"></div></button>
+        <figcaption class="caption"><span>Process overview</span><span>Click image to zoom</span></figcaption>
+      </figure>
+      <h2>Problem</h2>
+      <p>It is not unusual for B2B product companies to struggle with establishing efficient discovery and design processes. Challenges such as limited access to end users, slow feedback cycles, complex and customer-specific business processes, internal power dynamics within customer companies, and differing needs and goals between buyer and user personas all create significant hurdles for product teams during the discovery and design phases.</p>
+      <p>Nulogy is no different.</p>
+      <p>Nulogy’s suite of products varies in terms of maturity and adoption, ranging from industry-standard, well-established products to innovative offerings in the early stages of adoption. The more established a product is, the more data there is to inform the discovery and design process. These varying levels of maturity contributed to divergent processes across teams, making it difficult to synchronize process improvements, measure productivity metrics, and maintain transparency into work progress.</p>
+      <h2>Solution</h2>
+      <p>To address these issues, we needed to create a framework that provided a structured process based on common principles while allowing individual teams the flexibility to adapt it to their unique circumstances. I collaborated with the Director of Product to formulate this process.</p>
+      <p>The Continuous Discovery framework by Teresa Torres provided a strong foundation for formulating our process. While we adopted most of its concepts, we also introduced modifications to address its shortcomings when applied to enterprise software.</p>
+      <p>This process not only boosted our efficiency and the quality of our output, but also served as a foundation for collecting productivity metrics and structuring our research documentation and knowledge base. This has enabled the graceful scaling of our discovery and design practice.</p>
+      <p>After rolling out the process, I continued to promote its adoption. I onboarded new product managers and designers, ensured adherence to the process, and advocated for it across the organization. I also worked with teams to help bridge the gap between the framework and their unique circumstances.</p>
+      <h2>Conclusion</h2>
+      <p>By establishing a unified discovery and design process, we have significantly enhanced our ability to manage diverse product lines and improve overall efficiency. This structured yet adaptable framework has enabled us to streamline our workflows, foster better collaboration (both internaly and externally with clients), and achieve greater transparency. As we continue to refine and promote these processes, we are well-positioned to drive innovation and deliver exceptional value to our customers.</p>
+      <p class="muted">More detailed process overview available upon request.</p>
+    </div>
+  </article>
+
+  <!-- Page 2 -->
+  <article class="article scroll" id="ux-maturity">
+    <div class="article-inner">
+      <h1>UX <em>maturity</em></h1>
+      <p>One of the metrics I use to measure my personal success as a Head of Design is the degree to which I can influence the increase in UX maturity within an organization. Upon my promotion to Design Manager, one of my first tasks was to assess the current level of UX maturity and develop a strategy to advance the practice, thereby enhancing its impact on the business.</p>
+      <h2>Framework</h2>
+      <p>As part of the research for this initiative, I evaluated multiple frameworks and ultimately chose the Nielsen Norman Group’s model, which proved to be the most robust and actionable. This framework defines six stages of maturity and calls for analysis from 4 categories: strategy, culture, process, and outcomes.</p>
+      <figure class="thumb" style="margin:0">
+        <button class="img masked" data-zoom="img/maturity-stages.png" data-mode="fill" aria-label="Zoom: UX maturity model overview"><div class="mask"><img src="img/maturity-stages.png" alt="UX maturity stages, from Absent to User-driven"></div></button>
+        <figcaption class="caption"><span>UX maturity model overview</span><span>Click image to zoom</span></figcaption>
+      </figure>
+      <h2>Process</h2>
+      <p>I started the analysis by listing the behaviors that organization and design team display and circumstances that surround design practice. I used common obstacles defined by framework to guide this process.</p>
+      <p>Having this structure helped me understand which obstacles we have overcome and which are still to be overcame. It also allowed me to identify common threads (themes) and some variations that can be displayed in different products and teams.</p>
+      <p>As a final step, I outlined the main obstacles preventing us from reaching the next level, looked into recommendations on how to overcome them, identify areas of improvement that removal of the obstacles would bring, defined desired outcome, and generate actionable insights. At this point no action items were defined, but ultimately the insights from this exercise were used to shape the goals for coming years.</p>
+      <p>Below are the exemples of stage 3 and 4 anaysis.</p>
+      <figure class="thumb" style="margin:0">
+        <button class="img" data-zoom="img/discovery-process.png" data-mode="wide" aria-label="Zoom: Process overview"><div class="crop"><img src="img/discovery-process.png" alt=""></div></button>
+        <figcaption class="caption"><span>Process overview</span><span>Click image to zoom</span></figcaption>
+      </figure>
+      <figure class="thumb" style="margin:0">
+        <button class="img" data-zoom="img/discovery-process.png" data-mode="wide" aria-label="Zoom: Process overview"><div class="crop"><img src="img/discovery-process.png" alt=""></div></button>
+        <figcaption class="caption"><span>Process overview</span><span>Click image to zoom</span></figcaption>
+      </figure>
+      <h2>Outcome</h2>
+      <div class="p">
+        <p>My analysis revealed that we exhibited behaviours aligned with stages 3 and 4 of the model. To move to the next stage, key focus areas included:</p>
+        <ul>
+          <li>Standardizing design and product development processes across all teams</li>
+          <li>Centralizing documentation across the organization</li>
+          <li>Establishing UX KPIs across all products</li>
+          <li>Defining a unified platform design vision encompassing all of our products</li>
+        </ul>
+        <p class="gap">As a result, the following goals were set for the years ahead:</p>
+        <ul>
+          <li>Introduce a standardized product development process</li>
+          <li>Establish UX metrics</li>
+          <li>Design a "concept car" to drive the unified platform vision</li>
+        </ul>
+        <p class="gap">In addition to guiding strategy, the model also improved communication between the design team and the rest of the organization. A document like this made it easier to align goals with internal stakeholders, the broader product development team, and leadership.</p>
+      </div>
+      <p class="muted">More detailed process overview available upon request.</p>
+    </div>
+  </article>
+
+  <!-- Page 3 (draft text, as in Figma) -->
+  <article class="article scroll" id="ux-metrics">
+    <div class="article-inner">
+      <h1>Data driven design / <em>UX metrics</em></h1>
+      <div class="p">
+        <p>Although we would rely to data in the past we would to it ad hoc, when we needed a particular answer. As a result the design solutions lacked the confidence or required significant manual effort to collect all the data needed to validate the qualtiy of solution. Remove dependancy of qualitative date. However we needed something more recurrent, something continous, low effort and reliable.</p>
+        <p class="gap">As a result we we started collecting:</p>
+        <p class="gap">Product satisfaction survey<br>Pendo</p>
+        <p class="gap">UX KPIs<br>Pendo</p>
+        <p class="gap">Benefits for other departments</p>
+        <p class="gap">Metamorphosis in adoption metrics</p>
+        <p class="gap">Drving many product decisions. Give some examples:</p>
+      </div>
+      <h2>Framework</h2>
+      <p>As part of the research for this initiative, I evaluated multiple frameworks and ultimately chose the Nielsen Norman Group’s model, which proved to be the most robust and actionable. This framework defines six stages of maturity and calls for analysis from 4 categories: strategy, culture, process, and outcomes.</p>
+      <figure class="thumb" style="margin:0">
+        <button class="img" data-zoom="img/discovery-process.png" data-mode="wide" aria-label="Zoom: Process overview"><div class="crop"><img src="img/discovery-process.png" alt=""></div></button>
+        <figcaption class="caption"><span>Process overview</span><span>Click image to zoom</span></figcaption>
+      </figure>
+      <h2>Process</h2>
+      <p>I started the analysis by listing the behaviors that organization and design team display and circumstances that surround design practice. I used common obstacles defined by framework to guide this process.</p>
+      <p>Having this structure helped me understand which obstacles we have overcome and which are still to be overcame. It also allowed me to identify common threads (themes) and some variations that can be displayed in different products and teams.</p>
+      <p>As a final step, I outlined the main obstacles preventing us from reaching the next level, looked into recommendations on how to overcome them, identify areas of improvement that removal of the obstacles would bring, defined desired outcome, and generate actionable insights. At this point no action items were defined, but ultimately the insights from this exercise were used to shape the goals for coming years.</p>
+      <p>Below are the exemples of stage 3 and 4 anaysis.</p>
+      <figure class="thumb" style="margin:0">
+        <button class="img" data-zoom="img/discovery-process.png" data-mode="wide" aria-label="Zoom: Process overview"><div class="crop"><img src="img/discovery-process.png" alt=""></div></button>
+        <figcaption class="caption"><span>Process overview</span><span>Click image to zoom</span></figcaption>
+      </figure>
+      <figure class="thumb" style="margin:0">
+        <button class="img" data-zoom="img/discovery-process.png" data-mode="wide" aria-label="Zoom: Process overview"><div class="crop"><img src="img/discovery-process.png" alt=""></div></button>
+        <figcaption class="caption"><span>Process overview</span><span>Click image to zoom</span></figcaption>
+      </figure>
+      <h2>Outcome</h2>
+      <div class="p">
+        <p>My analysis revealed that we exhibited behaviours aligned with stages 3 and 4 of the model. To move to the next stage, key focus areas included:</p>
+        <ul>
+          <li>Standardizing design and product development processes across all teams</li>
+          <li>Centralizing documentation across the organization</li>
+          <li>Establishing UX KPIs across all products</li>
+          <li>Defining a unified platform design vision encompassing all of our products</li>
+        </ul>
+        <p class="gap">As a result, the following goals were set for the years ahead:</p>
+        <ul>
+          <li>Introduce a standardized product development process</li>
+          <li>Establish UX metrics</li>
+          <li>Design a "concept car" to drive the unified platform vision</li>
+        </ul>
+        <p class="gap">In addition to guiding strategy, the model also improved communication between the design team and the rest of the organization. A document like this made it easier to align goals with internal stakeholders, the broader product development team, and leadership.</p>
+      </div>
+      <p class="muted">More detailed process overview available upon request.</p>
+    </div>
+  </article>
+
+  <!-- Spark UI case study (draft 2) -->
+  <article class="article scroll" id="spark-ui">
+    <div class="article-inner">
+      <h1>Spark UI: a design system built for <em>people and AI</em></h1>
+      <p>A code-first design system for Nulogy's new unified platform. I planned the architecture, built it hands-on with Claude Code, and structured the design knowledge so AI could generate screens that follow Spark UI's design decisions.</p>
+      <figure class="cs-hero" aria-hidden="true">
+        <div class="iso">
+          <div class="slab" style="--i:0"><span>Context</span></div>
+          <div class="slab" style="--i:1"><span>Behaviour</span></div>
+          <div class="slab" style="--i:2"><span>Styling</span></div>
+          <div class="slab" style="--i:3"><span>Foundations</span></div>
+          <div class="rules-seg full" style="top:-16.4px;height:70.0px"></div><div class="rules-seg light" style="top:73.6px;height:53.6px"></div><div class="rules-seg full" style="top:127.2px;height:14.4px"></div><div class="rules-seg light" style="top:161.6px;height:53.6px"></div><div class="rules-seg full" style="top:215.2px;height:14.4px"></div><div class="rules-seg light" style="top:249.6px;height:53.6px"></div><div class="rules-seg full" style="top:303.2px;height:14.4px"></div><div class="rules-seg light" style="top:337.6px;height:53.6px"></div><div class="rules-seg" style="top:391.2px;height:20px"></div><span class="rules-label">Rules</span>
+        </div>
+        <ul class="iso-labels">
+          <li style="--i:0"><b>Rules, templates, recipes</b><code>Markdown · React</code></li>
+          <li style="--i:1"><b>Components, utilities</b><code>Kendo UI + custom</code></li>
+          <li style="--i:2"><b>Themes</b><code>Tailwind CSS</code></li>
+          <li style="--i:3"><b>Tokens</b><code>Style Dictionary</code></li>
+        </ul>
+      </figure>
+      <dl class="facts">
+        <div class="span2"><dt>Outcome</dt><dd>One of the platform's three products fully migrated to Spark UI within months. Built by a team of two.</dd></div>
+        <div><dt>Role</dt><dd>Design system lead. I led Spark UI from strategy and architecture through design decisions and implementation. I worked hands-on with Claude Code and managed priorities, requirements and feedback to guide its development.</dd></div>
+        <div><dt>Team</dt><dd>Me, working with one developer who joined a few weeks into the project. The chief architect reviewed and signed off on the architecture.</dd></div>
+        <div><dt>Timeline</dt><dd>March–November 2026</dd></div>
+        <div><dt>Built with</dt><dd>Claude Code, React, TypeScript, Kendo UI, Tailwind CSS, Style Dictionary, Storybook</dd></div>
+        <div class="span2 sb-link"><dt>Links</dt><dd><a href="#" role="button" data-panel="ex-sb">Storybook <span aria-hidden="true">↗</span></a></dd></div>
+      </dl>
+
+      <h2>The challenge</h2>
+      <p>Two acquisitions left Nulogy with five products, each with its own design and behaviour patterns. In 2026, the company set out to merge three of them into one unified platform (of the other two, one stayed separate and one is being retired). The new platform needed its own design system: one that made the three products feel like one, without inheriting the old products' constraints.</p>
+
+      <h2>The approach</h2>
+      <div class="p">
+        <p>I'd built a design system before. In 2018, I co-built the Nulogy Design System (NDS) with a team of four. Over the years, investment in it was inconsistent, and the cracks began to show. So rather than patch it, we started from scratch and carried three lessons forward:</p>
+        <ul>
+          <li><strong>One source of truth.</strong> Code only, with no separate Figma library to keep in sync. Designers had already moved to code-first prototyping.</li>
+          <li><strong>Lean on purpose.</strong> Build only what a small team can keep healthy, even when investment dips.</li>
+          <li><strong>Built for the platform.</strong> Serve every product equally, not just the loudest one.</li>
+        </ul>
+      </div>
+      <h2>Phases</h2>
+      <ol class="phases">
+        <li><span class="when">1 month</span><b>Decide</b><span>Evaluated design foundations, frameworks and technologies through research and technical spikes. Established the architecture and key design decisions.</span></li>
+        <li><span class="when">1.5 months</span><b>Build</b><span>Built the foundations, components, templates, rules and recipes needed to support the first product.</span></li>
+        <li><span class="when">1 month</span><b>Prove</b><span>Rolled Spark UI out in the first product. Real screens exposed gaps and edge cases, which we addressed to validate and strengthen the system.</span></li>
+        <li><span class="when">Ongoing</span><b>Scale</b><span>Extending the system across the platform, bringing the remaining products onto a shared foundation.</span></li>
+      </ol>
+
+      <h2>Architecture</h2>
+      <p>Spark UI separates four concerns: design foundations, styling, behaviour and design context. Each layer has a distinct responsibility, with the aim of keeping changes contained: themes can change without rewriting components, and technology can be replaced layer by layer.</p>
+      <figure class="diagram-fig">
+        <div class="concerns" role="img" aria-label="Four layers from top to bottom: context (rules, templates, recipes), behaviour (components, utilities), styling (themes, Tailwind CSS), foundations (tokens, Style Dictionary). Each layer only builds on the one below.">
+          <div class="concern"><span class="tag">Context</span>
+            <dl class="parts">
+              <dt>Rules</dt><dd>Written rules for interaction, layout and content. They apply across the layers and cover decisions that code alone can't enforce.</dd><dd class="tech">Markdown</dd>
+              <dt>Templates</dt><dd>Whole-page structures for index, details and configuration views.</dd><dd class="tech">React</dd>
+              <dt>Recipes</dt><dd>Repeatable design patterns that combine components, like the filter bar used across list pages.</dd><dd class="tech">React</dd>
+            </dl>
+          </div>
+          <div class="concern"><span class="tag">Behaviour</span>
+            <dl class="parts">
+              <dt>Components</dt><dd>Reusable interface elements, each with its own states and behaviour.</dd><dd class="tech">Kendo UI + custom components</dd>
+              <dt>Utilities</dt><dd>Shared behaviours that aren't components on their own, such as drag and drop and the notification mechanism.</dd><dd class="tech">Kendo UI or custom</dd>
+            </dl>
+          </div>
+          <div class="concern"><span class="tag">Styling</span>
+            <dl class="parts">
+              <dt>Themes</dt><dd>Apply tokens to components, defining the product's visual appearance in one place.</dd><dd class="tech">Tailwind CSS</dd>
+            </dl>
+          </div>
+          <div class="concern"><span class="tag">Foundations</span>
+            <dl class="parts">
+              <dt>Tokens</dt><dd>The raw design decisions: colour, spacing, typography and motion.</dd><dd class="tech">Style Dictionary</dd>
+            </dl>
+          </div>
+        </div>
+        <figcaption class="caption"><span>Each layer builds on the one below it. Rules apply across all layers.</span></figcaption>
+      </figure>
+
+      <h2>An architectural trade-off</h2>
+      <p>The behaviour layer was designed around headless components: behaviour and accessibility without styling, leaving the visual layer to control appearance.</p>
+      <p>I recommended shadcn/ui, which combines Radix's headless primitives with Tailwind — the same technology we planned to use for styling. The team chose Kendo UI for its data visualization capabilities and familiarity with the library.</p>
+      <div class="compare">
+        <div><span class="tag">I recommended</span><b>shadcn/ui</b><p>Radix headless primitives + Tailwind. Behaviour and styling fully separate.</p></div>
+        <div class="chosen"><span class="tag">The team chose</span><b>Kendo UI</b><p>Data visualization and familiarity. Unstyled mode for only some components.</p></div>
+      </div>
+      <p>There was a trade-off. Kendo's unstyled mode only covers some components, so behaviour and styling couldn't be fully separated. We designed around that limitation, building custom components where Kendo fell short.</p>
+
+      <h2>Inside the layers</h2>
+      <div class="examples">
+        <div class="ex layer-foundations" role="button" tabindex="0" aria-expanded="false" aria-controls="ex-sig" data-panel="ex-sig">
+          <div class="ex-thumb sw"><i style="background:#d6342c"></i><i style="background:#f2c100"></i><i style="background:#2e9b4f"></i></div>
+          <span class="tag">Foundations</span><b>Signal colours</b>
+          <p>Red, yellow and green, inspired by the lamps on factory equipment. They help screens speak the same visual language operators see on the floor.</p>
+          <span class="more">Open documentation <i>↗</i></span>
+        </div>
+        <div class="ex layer-context" role="button" tabindex="0" aria-expanded="false" aria-controls="ex-rec" data-panel="ex-rec">
+          <div class="ex-thumb re"><span class="input">Search</span><span class="chip">Status ▾</span><span class="chip">Line ▾</span><span class="chip on">Shift: A ×</span></div>
+          <span class="tag">Context</span><b>Recipes</b>
+          <p>About five repeatable patterns. One example is the filter bar, which combines search and filters consistently across list pages.</p>
+          <span class="more">Open documentation <i>↗</i></span>
+        </div>
+        <div class="ex layer-context" role="button" tabindex="0" aria-expanded="false" aria-controls="ex-rul" data-panel="ex-rul">
+          <div class="ex-thumb ru"><span><b>Interaction</b>Destructive actions ask for confirmation</span><span><b>Layout</b>Primary action sits top right</span><span><b>Content</b>Buttons start with a verb</span></div>
+          <span class="tag">Context</span><b>Rules</b>
+          <p>About 20 written rules covering interaction, layout and content. They give AI the decisions and constraints it needs to follow the same design approach as the team.</p>
+          <span class="more">Open documentation <i>↗</i></span>
+        </div>
+      </div>
+      <div class="ex-panels" hidden>
+        <section class="ex-panel" id="ex-sb" hidden>
+          <span class="tag">Documentation</span><b>Spark UI Storybook</b>
+          <p>[Caption coming: what Storybook covers and how teams and AI use it.]</p>
+        </section>
+        <section class="ex-panel" id="ex-sig" hidden>
+          <span class="tag">Foundations</span><b>Signal colours</b>
+          <p>Spark UI's colour palette has four categories: contextual (error, warning, success, info), categorical (charts), layout (greys and the primary blue) and signal. Signal colours mirror the stack lights on factory equipment, so a screen showing a production line's state reads the same as the machine in front of the operator.</p>
+          <p>Every hue runs from 000 to 900 in steps of 100, with fixed roles: 600 for solid surfaces, 300 for borders, and 200 backgrounds with 800 text.</p>
+        </section>
+        <section class="ex-panel" id="ex-rec" hidden>
+          <span class="tag">Context</span><b>Recipes</b>
+          <p>A recipe is a tested combination of components with its own usage rules. The filter bar combines a search field, filter dropdowns and chips for active filters. Every list page uses the same recipe, so filtering works the same everywhere, and AI assembles it the same way a designer would.</p>
+          <p>Spark UI has about five recipes. Each one started as a pattern teams kept rebuilding by hand.</p>
+        </section>
+        <section class="ex-panel" id="ex-rul" hidden>
+          <span class="tag">Context</span><b>Rules</b>
+          <p>Rules are short, written statements stored with the system, split into interaction, layout and content writing. Most came from review: when the same comment came up twice, it became a rule.</p>
+          <p>Designers read them in Storybook. Claude Code reads the same files, and the prototyping skill warns when a request would break one.</p>
+        </section>
+      </div>
+
+
+      <h2>Building the system</h2>
+      <div class="p">
+        <p>I owned the component requirements and backlog, and guided how each component was integrated, designed and maintained. Most were built on Kendo UI, but the approach varied depending on the component. Each one involved a series of decisions:</p>
+        <ol class="steps">
+          <li><strong>Choose the integration approach</strong> Decide whether to wrap the Kendo component in Spark UI or export it directly.</li>
+          <li><strong>Define the API</strong> For wrapped components, decide which Kendo props to expose, which to leave out and which behaviours or components to build ourselves. Omitted props remained accessible through <code>kendoProps</code> — a deliberately discouraged escape hatch.</li>
+          <li><strong>Follow the architecture</strong> Build the component using the structure agreed with the chief architect.</li>
+          <li><strong>Document the decisions</strong> Capture architectural decisions and their rationale in ADRs, alongside component documentation.</li>
+          <li><strong>Review and validate</strong> Components went through an automated CI pipeline covering linting, type checks, unit and accessibility tests, Chromatic visual regression and Playwright end-to-end tests, followed by code review. Feedback that came up repeatedly became a written rule.</li>
+        </ol>
+      </div>
+      <p>Once the process was stable, I turned it into a Claude Code skill that guided component creation, generated the supporting files and opened the pull request.</p>
+      <p class="pull">My proudest moment was the first fully green pull request. The architecture, documentation, tests and automated pipeline were working together as one system.</p>
+
+      <h2>Governance</h2>
+      <p>Spark UI started centralized. At first, the system's knowledge sat with me, and the people using it shaped it through their feedback. The plan was to open the system up as it matured. Once the foundation was validated and adoption began to scale, it would move to a mixed model, with product teams contributing alongside the core team.</p>
+
+      <h2>Documentation and AI guidance</h2>
+      <p>The GitHub repository was the entry point to Spark UI. From there, Storybook brought the system's knowledge together in one place: foundations, components, recipes, templates, rules, experiments and live examples.</p>
+      <p>The goal was to make more than the components discoverable. The documentation captured how the system worked, how its pieces fit together and the design decisions behind them. That gave both the team and Claude Code a shared reference to work from.</p>
+      <p>I also created Claude Code skills for common tasks: adding a component, adding an icon and reviewing changes. These gave AI a repeatable way to work within the system rather than relying on prompts alone.</p>
+      <p>Spark UI's documentation wasn't an afterthought. It was part of the system itself — making its decisions available to the people and AI building with it.</p>
+
+      <h2>Accessibility</h2>
+      <p>Our target was WCAG 2.2 AA, and the first release met it, including colour contrast. Every pull request ran automated accessibility checks.</p>
+      <p>Colour contrast became a point of contention later. Following pushback from some stakeholders, we relaxed the requirements in the default theme. My younger self would have fought that decision to the end. Instead, I set one condition: an accessible theme had to be ready before the product left beta.</p>
+      <p>Because styling was a separate layer, the accessible theme could be built without changing components. I had completed it by the time my role ended, but it hadn't shipped yet.</p>
+
+      <h2>Results</h2>
+      <p>When my role ended in November 2026, one of the three products on the new platform ran fully on Spark UI. The other two were in progress.</p>
+      <div class="stats">
+        <div><b>33%</b><span>platform coverage</span></div>
+        <div><b>75+</b><span>components</span></div>
+        <div><b>~20</b><span>rules</span></div>
+        <div><b>~5</b><span>recipes</span></div>
+        <div><b>4</b><span>templates</span></div>
+        <div><b>50+</b><span>architecture decision records</span></div>
+        <div><b>3</b><span>Claude Code skills</span></div>
+      </div>
+
+      <h2>What I learned</h2>
+      <p><strong>I didn’t need to be an expert in everything.</strong> With the original design system, I designed the system while others built the front-end architecture. With Spark UI, I took on both the architecture and hands-on implementation, using Claude Code to help in areas I knew less well, mainly testing.</p>
+      <p>What made that safe wasn’t the AI. It was knowing where my knowledge was thin and putting checks in place: the chief architect’s review, a full test pipeline, and written rules every change had to follow.</p>
+
+      <h2>What's next</h2>
+      <p>Spark UI is still in its early stages. The next steps are:</p>
+      <div class="p">
+        <ul>
+          <li><strong>An ownership model for decisions</strong> The 50+ architecture decision records had grown without pruning. The plan was for an expert in each area (design, front end and architecture) to own the decisions in that area, keeping the records current and useful.</li>
+          <li><strong>Component usage monitoring</strong> Tracking which components, recipes and templates teams actually use, to guide the roadmap and show where products drift from the system.</li>
+          <li><strong>Design Sandbox</strong> Spark UI is the foundation for a prompt-to-prototype tool that builds working interfaces from the system.</li>
+        </ul>
+      </div>
+      <h2 class="related-title">Related case studies</h2>
+      <div class="related">
+        <a class="rel cta" aria-disabled="true">
+          <span class="tag">2026 · Coming soon</span>
+          <b>Design Sandbox</b>
+          <p>A prompt-to-prototype tool built on Spark UI. Describe a page or paste a screenshot, and AI turns that design intent into a working interface built from the system.</p>
+          <span class="go">Read the case study →</span>
+        </a>
+        <a class="rel" aria-disabled="true">
+          <span class="tag">2018–2021 · Coming soon</span>
+          <b>Nulogy Design System (NDS)</b>
+          <p>The first design system: built in 2018 with a team of four, in React and Figma.</p>
+        </a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<div class="fade-bottom" aria-hidden="true"></div>
+
+<!-- Image zoom overlay -->
+<div class="doczoom" role="dialog" aria-modal="true" aria-label="Documentation">
+  <div class="bar">
+    <button class="back" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to article
+    </button>
+  </div>
+  <div class="dz-body"><div class="dz-doc"></div><aside class="dz-cap"></aside></div>
+  <template id="doc-ex-sb"><div class="docpage"><div class="dp-nav"><b>Spark UI</b><span class="on">Introduction</span><span>Foundations</span><span>Components</span><span>Recipes</span><span>Templates</span><span>Rules</span></div><div class="dp-main"><p class="dp-crumb">Introduction</p><h3>Spark UI Storybook</h3><p class="dp-lead">[Storybook overview content coming.]</p></div></div></template>
+  <template id="doc-ex-sig"><div class="docpage">
+  <div class="dp-nav"><b>Spark UI</b><span>Foundations</span><span class="on">Colour</span><span>Spacing</span><span>Typography</span><span>Motion</span><span>Components</span><span>Recipes</span><span>Templates</span><span>Rules</span></div>
+  <div class="dp-main">
+    <p class="dp-crumb">Foundations / Colour</p>
+    <h3>Colour</h3>
+    <p class="dp-lead">Four categories. Every hue runs 000–900; roles are fixed: 600 solid surfaces, 300 borders, 200 backgrounds with 800 text.</p>
+    <h4>Signal</h4>
+    <div class="signal">
+      <div class="lamp"><i style="background:#d6342c"></i><i style="background:#f2c100"></i><i style="background:#2e9b4f"></i></div>
+      <div><div class="ramp"><div class="rn">Red<small>stopped</small></div><div class="cells"><div class="sw" style="background:#fceeed"><span>000</span></div><div class="sw" style="background:#f7d5d3"><span>100</span></div><div class="sw" style="background:#f2b4b0"><span>200</span></div><div class="sw" style="background:#eb8b84"><span>300</span></div><div class="sw" style="background:#e36158"><span>400</span></div><div class="sw" style="background:#dc382c"><span>500</span></div><div class="sw" style="background:#c02a1f"><span>600</span></div><div class="sw" style="background:#9d2219"><span>700</span></div><div class="sw" style="background:#7a1a13"><span>800</span></div><div class="sw" style="background:#57130e"><span>900</span></div></div></div><div class="ramp"><div class="rn">Yellow<small>attention</small></div><div class="cells"><div class="sw" style="background:#fefaeb"><span>000</span></div><div class="sw" style="background:#fdf2cd"><span>100</span></div><div class="sw" style="background:#fde8a5"><span>200</span></div><div class="sw" style="background:#fcdc73"><span>300</span></div><div class="sw" style="background:#fbcf41"><span>400</span></div><div class="sw" style="background:#fac30f"><span>500</span></div><div class="sw" style="background:#dba904"><span>600</span></div><div class="sw" style="background:#b38a03"><span>700</span></div><div class="sw" style="background:#8b6b02"><span>800</span></div><div class="sw" style="background:#634d02"><span>900</span></div></div></div><div class="ramp"><div class="rn">Green<small>running</small></div><div class="cells"><div class="sw" style="background:#effaf3"><span>000</span></div><div class="sw" style="background:#d8f2e1"><span>100</span></div><div class="sw" style="background:#b9e8c9"><span>200</span></div><div class="sw" style="background:#92dcab"><span>300</span></div><div class="sw" style="background:#6bd08d"><span>400</span></div><div class="sw" style="background:#44c46f"><span>500</span></div><div class="sw" style="background:#35aa5c"><span>600</span></div><div class="sw" style="background:#2c8b4b"><span>700</span></div><div class="sw" style="background:#226c3b"><span>800</span></div><div class="sw" style="background:#184d2a"><span>900</span></div></div></div></div>
+    </div>
+    <h4>Contextual</h4>
+    <div class="chips"><span style="background:#fde3e1;color:#8c1d16">Error</span><span style="background:#fdf1c9;color:#7a5b00">Warning</span><span style="background:#dcf2e3;color:#1c5f31">Success</span><span style="background:#dde8fb;color:#1d4a91">Info</span></div>
+    <h4>Layout</h4>
+    <div class="ramp"><div class="rn">Grey<small></small></div><div class="cells"><div class="sw" style="background:#f3f4f5"><span>000</span></div><div class="sw" style="background:#e3e4e7"><span>100</span></div><div class="sw" style="background:#cdcfd4"><span>200</span></div><div class="sw" style="background:#b1b5bd"><span>300</span></div><div class="sw" style="background:#969ba5"><span>400</span></div><div class="sw" style="background:#7a818e"><span>500</span></div><div class="sw" style="background:#676d79"><span>600</span></div><div class="sw" style="background:#545963"><span>700</span></div><div class="sw" style="background:#41454d"><span>800</span></div><div class="sw" style="background:#2e3137"><span>900</span></div></div></div><div class="ramp"><div class="rn">Primary blue<small>600 = primary</small></div><div class="cells"><div class="sw" style="background:#edf2fb"><span>000</span></div><div class="sw" style="background:#d3e0f7"><span>100</span></div><div class="sw" style="background:#b0c8f1"><span>200</span></div><div class="sw" style="background:#85aae9"><span>300</span></div><div class="sw" style="background:#5a8ce1"><span>400</span></div><div class="sw" style="background:#2e6dda"><span>500</span></div><div class="sw" style="background:#215bbe"><span>600</span></div><div class="sw" style="background:#1b4a9c"><span>700</span></div><div class="sw" style="background:#153a79"><span>800</span></div><div class="sw" style="background:#0f2956"><span>900</span></div></div></div>
+    <h4>Categorical</h4>
+    <div class="cats"><i style="background:#2f6fdf"></i><i style="background:#e0692e"></i><i style="background:#2e9b8f"></i><i style="background:#8a55c9"></i><i style="background:#d4a21c"></i><i style="background:#d14f7a"></i><i style="background:#5a8f2e"></i><i style="background:#6b7a99"></i></div>
+  </div>
+</div></template>
+  <template id="doc-ex-rec"><div class="docpage">
+  <div class="dp-nav"><b>Spark UI</b><span>Foundations</span><span>Components</span><span class="on">Recipes</span><span>Templates</span><span>Rules</span></div>
+  <div class="dp-main">
+    <p class="dp-crumb">Recipes / Filter bar</p>
+    <h3>Filter bar</h3>
+    <p class="dp-lead">Used on every list page. Search first, then filters, then the chips for active filters.</p>
+    <div class="fb-demo">
+      <span class="in">Search orders…</span><span class="dd">Status ▾</span><span class="dd">Line ▾</span><span class="dd">Shift ▾</span>
+      <div class="fb-chips"><span class="ch">Shift: A ×</span><span class="ch">Status: Running ×</span><a>Clear all</a></div>
+    </div>
+    <h4>Anatomy</h4>
+    <ol class="anat"><li><b>Search</b> Free text across the list's key fields.</li><li><b>Filters</b> Dropdowns, in order of how often they're used.</li><li><b>Active filters</b> One chip per applied filter, removable one by one.</li></ol>
+    <h4>Usage</h4>
+    <ul class="dp-rules"><li>Use on every list page; don't build a custom filter row.</li><li>Keep at most four filters visible; put the rest under "More".</li></ul>
+  </div>
+</div></template>
+  <template id="doc-ex-rul"><div class="docpage">
+  <div class="dp-nav"><b>Spark UI</b><span>Foundations</span><span>Components</span><span>Recipes</span><span>Templates</span><span class="on">Rules</span></div>
+  <div class="dp-main">
+    <p class="dp-crumb">Rules</p>
+    <h3>Rules</h3>
+    <p class="dp-lead">About 20 rules in three groups. Designers read them here; Claude Code reads the same files.</p>
+    <h4>Interaction</h4><ul class="dp-rules"><li>Destructive actions ask for confirmation.</li><li>…</li></ul>
+    <h4>Layout</h4><ul class="dp-rules"><li>The primary action sits top right.</li><li>…</li></ul>
+    <h4>Content writing</h4><ul class="dp-rules"><li>Buttons start with a verb.</li><li>…</li></ul>
+  </div>
+</div></template>
+</div>
+<script>
+(function () {
+  var dz = document.querySelector('.doczoom'), last = null;
+  function open(card) {
+    last = card;
+    var id = card.dataset.panel;
+    dz.querySelector('.dz-doc').innerHTML = document.getElementById('doc-' + id).innerHTML;
+    dz.querySelector('.dz-cap').innerHTML = document.getElementById(id).innerHTML + '<p class="dz-note">Recreated for this portfolio; the real documentation is private.</p>';
+    dz.classList.add('on'); dz.querySelector('.back').focus();
+  }
+  function close() { dz.classList.remove('on'); if (last) last.focus({ preventScroll: true }); }
+  document.querySelectorAll('#spark-ui [data-panel]').forEach(function (c) {
+    c.addEventListener('click', function (e) { e.preventDefault(); open(c); });
+    c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(c); } });
+  });
+  dz.querySelector('.back').addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && dz.classList.contains('on')) close(); });
+})();
+</script>
+<div class="zoom" role="dialog" aria-modal="true" aria-label="Image">
+  <div class="bar">
+    <button class="back" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to article
+    </button>
+  </div>
+  <div class="stage"><img alt=""></div>
+</div>
+
+<script src="js/home.js"></script>
 </body>
 </html>
