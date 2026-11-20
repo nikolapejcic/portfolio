@@ -321,7 +321,7 @@ a.item:hover span { text-decoration: underline; }
 .hero > div { position: absolute; }
 .hero .g1 { left: 0; top: 49px; width: 177.742px; height: 207.037px; }
 .hero .g2 { left: 73px; top: 0; width: 74.242px; height: 384.847px; }
-.hero .g3 { left: 480px; top: 212px; width: 74.242px; height: 100.348px; }
+.hero .g3 { left: 480px; top: 226.62px; width: 74.242px; height: 85.7275px; }
 .hero .name {                                             /* box 567.749 x 340.998, centred at (309.87, 267.5) */
   left: calc(309.87px - 283.874px); top: calc(267.5px - 170.499px);
   width: 567.749px; height: 340.998px;
@@ -1498,3 +1498,11 @@ body.reading .featured { transform: translateY(8px); }
 /* Logo 36px from the top (was 35); main content moves down by the same 1px so titles stay on the pink line */
 .logo-bar .wrap { padding-top: 36px; }
 @media (min-width: 901px) { .article-inner { padding-top: 97px; } }
+
+/* Knowledge workflow (2026-11-20): no bottom bands or badges. A small status label at the bottom of the two person cards says what happened to the article: Review = approved, Publish = published. */
+#knowledge-articles .kf-step::after { display: none; }
+#knowledge-articles .kf-step, #knowledge-articles .kf-step.hu, #knowledge-articles .kf-step.end { padding-bottom: 40px; }
+#knowledge-articles .kf-badge { display: none; }
+#knowledge-articles .kf-step.hu small::after, #knowledge-articles .kf-step.end small::after { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font: 500 10px/14px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+#knowledge-articles .kf-step.hu:not(.end) small::after { content: "✓ Approved"; color: #52525b; }
+#knowledge-articles .kf-step.end small::after { content: "✓ Published"; color: #1f9d55; }

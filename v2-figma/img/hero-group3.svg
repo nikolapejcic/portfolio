@@ -1,7 +1,8 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="74.2419" height="100.348" viewBox="0 0 74.2419 100.348" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="74.2419" height="85.7275" viewBox="0 0 74.2419 85.7275" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- True isometric cube (all edges 42.86), 2026-11-20. Was a Figma box with uneven sides. -->
 <g id="Group 3">
-<path id="Rectangle 3" d="M31.7033 49L74.2418 20.2686V71.6087L31.7033 100.34V49Z" fill="#FFCEEB"/>
-<path id="Rectangle 4" d="M9.79754e-05 28.709L31.7033 49V100.348L9.79754e-05 80.057V28.709Z" fill="#FFC1E7"/>
-<path id="Rectangle 5" d="M42.5386 0L74.2419 20.4219L31.7033 49.198L0 28.7761L42.5386 0Z" fill="#FFCBEB"/>
+<path id="Right" d="M37.121 42.8638L74.2419 21.4319V64.2956L37.121 85.7275V42.8638Z" fill="#FFCEEB"/>
+<path id="Left" d="M0 21.4319L37.121 42.8638V85.7275L0 64.2956V21.4319Z" fill="#FFC1E7"/>
+<path id="Top" d="M37.121 0L74.2419 21.4319L37.121 42.8638L0 21.4319L37.121 0Z" fill="#FFCBEB"/>
 </g>
 </svg>
