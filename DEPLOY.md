@@ -1,13 +1,14 @@
 # Deploying the portfolio (password protected)
 
-Last updated: 2026-11-19 (login page)
+Last updated: 2026-11-20 (password-only login, two passwords)
 
 Hosting: Cloudflare Workers (free), code in a private GitHub repo.
 Only the `v2-figma` folder is published (see `wrangler.jsonc`). `worker/index.js`
-shows a branded login page before any page or image loads, and remembers a signed-in
-visitor for 30 days (cookie). "Request access" opens the visitor's email app, addressed
+shows a branded, password-only login page before any page or image loads, and remembers a
+signed-in visitor for 30 days (signed cookie). Either password works. Older Basic Auth
+logins and older cookies still work. `robots.txt` is the only public file. Login attempts are
+limited to 10 per minute per IP. "Request access" opens the visitor's email app, addressed
 to nikola.pejcic.to@gmail.com.
-(`functions/_middleware.js` is the same gate for the older Cloudflare Pages setup.)
 
 ## One-time setup (about 10 minutes)
 
@@ -28,7 +29,12 @@ to nikola.pejcic.to@gmail.com.
 
 ### 3. Add the password
 Project → Settings → Variables and Secrets → Add → type **Secret**:
-`SITE_PASS` = *(the password; not stored in this repo)*. `SITE_USER` (guest) is already in `wrangler.jsonc`.
+- `SITE_PASS` = main password *(not stored in this repo)*
+- `SITE_PASS_2` = optional second password
+- `SESSION_SECRET` = a long random string (signs the login cookie; if missing, `SITE_PASS` is used)
+
+`SITE_USER` (guest) in `wrangler.jsonc` only keeps older cookies and Basic Auth logins working.
+Local testing: put test values for the same three names in `.dev.vars` (git-ignored), then `npx wrangler dev`.
 When the free daily limit (100,000 requests) is used up, the site stops serving; it never opens without the login.
 
 ### 4. Check it
@@ -37,5 +43,5 @@ When the free daily limit (100,000 requests) is used up, the site stops serving;
 
 ## Day to day
 - Edit, then `git add -A && git commit -m "…" && git push`. Cloudflare redeploys in about a minute.
-- Change the password: Cloudflare → project → Settings → Variables and Secrets → edit `SITE_PASS`. This signs everyone out.
+- Change the password: Cloudflare → project → Settings → Variables and Secrets → edit `SITE_PASS` or `SITE_PASS_2`. People already signed in stay signed in; to sign everyone out, change `SESSION_SECRET`.
 - Optional: add your own domain under Custom domains.
