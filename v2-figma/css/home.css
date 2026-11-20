@@ -1397,3 +1397,104 @@ body.reading .featured { transform: translateY(8px); }
 .ex-thumb.im.sq img { border-radius: 3px; }
 .ex-thumb.rg { align-items: flex-start; padding-top: 22px; }
 .dz-cap h4.dz-sub { font: 500 12px/16px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #808080; margin: 24px 0 12px; }
+
+/* Knowledge articles workflow: icons (2026-11-19). Logos are masks, so they take the text colour. */
+#knowledge-articles .kf-ic { display: block; flex: none; width: 16px; height: 16px; background: currentColor;
+  -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+#knowledge-articles .kf-src { gap: 6px; }
+#knowledge-articles .kf-src span { display: flex; align-items: center; gap: 8px; text-align: left; padding: 5px 8px; color: #52525b; }
+#knowledge-articles .kf-step .kf-ic { width: 28px; height: 28px; margin-bottom: 8px; }
+#knowledge-articles .kf-step.ai .kf-ic { color: #ff29a9; }
+#knowledge-articles .kf-step.hu .kf-ic { color: #52525b; }
+#knowledge-articles .kf-step.end .kf-ic { color: #fff; }
+/* Publish: the finish line. White with a pink outline, so it stands apart without reading as a Claude step. */
+#knowledge-articles .kf-step.end { background: #fff; box-shadow: inset 0 0 0 1.5px #ff29a9; }
+#knowledge-articles .kf-step.end b { color: #b0006f; }
+#knowledge-articles .kf-step.end em, #knowledge-articles .kf-step.end small { color: #555; }
+#knowledge-articles .kf-step.end .kf-ic { color: #52525b; }
+/* Publish matches Review (grey); icons carry the difference: grey question on Review, green check on Publish. */
+#knowledge-articles .kf-step.end { background: #ececee; box-shadow: none; }
+#knowledge-articles .kf-step.end b { color: var(--t-ink); }
+#knowledge-articles .kf-step.end .kf-ic { color: #1f9d55; }
+/* Sources wrapped in one card, matching the step cards */
+#knowledge-articles .kf-src { background: #fff; border: 1px solid #e4e4e7; border-radius: 8px; padding: 12px 10px; gap: 2px; justify-content: flex-start; }
+#knowledge-articles .kf-src em { font: var(--label); font-style: normal; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: #555; margin-bottom: 6px; }
+#knowledge-articles .kf-src span { border: 0; background: none; padding: 3px 0; }
+/* Keep each source as its own box inside the card */
+#knowledge-articles .kf-src { gap: 5px; background: #f4f4f5; border-color: #e4e4e7; }
+#knowledge-articles .kf-src span { background: #fff; border: 1px solid #e4e4e7; border-radius: 4px; padding: 4px 8px; }
+/* Person icons on both human steps; status shown as a solid badge in the card's corner */
+#knowledge-articles .kf-step { position: relative; }
+#knowledge-articles .kf-step.end .kf-ic { color: #52525b; }
+#knowledge-articles .kf-badge { position: absolute; top: 10px; right: 10px; width: 20px; height: 20px; border-radius: 50%; }
+#knowledge-articles .kf-badge::after { content: ""; position: absolute; inset: 3px; background: #fff;
+  -webkit-mask: var(--g) center / contain no-repeat; mask: var(--g) center / contain no-repeat; }
+#knowledge-articles .kf-badge.q { background: #71717a; --g: url(../img/logos/question-glyph.svg); }
+#knowledge-articles .kf-badge.ok { background: #1f9d55; --g: url(../img/logos/check-glyph.svg); }
+/* All six cards the same width */
+#knowledge-articles .kflow { grid-template-columns: minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr); }
+@media (max-width: 720px) { #knowledge-articles .kflow { grid-template-columns: 1fr; } }
+/* Bigger, centred step icons; status badge larger, at the bottom of the card */
+#knowledge-articles .kf-step .kf-ic { width: 40px; height: 40px; margin: 4px auto 12px; }
+#knowledge-articles .kf-step.hu, #knowledge-articles .kf-step.end { padding-bottom: 48px; }
+#knowledge-articles .kf-badge { top: auto; bottom: 12px; right: 12px; width: 28px; height: 28px; }
+#knowledge-articles .kf-badge::after { inset: 5px; }
+#knowledge-articles .kf-src .kf-ic { width: 18px; height: 18px; }
+/* Centred card text; badge centred at the bottom to match */
+#knowledge-articles .kf-step { text-align: center; align-items: center; }
+#knowledge-articles .kf-badge { right: auto; left: 50%; transform: translateX(-50%); }
+#knowledge-articles .kf-src em { text-align: center; }
+/* Publish card: green, the finish line */
+#knowledge-articles .kf-step.end { background: #e3f5ec; }
+#knowledge-articles .kf-step.end em { color: #0f6e56; }
+#knowledge-articles .kf-step.end .kf-ic { color: #0f6e56; }
+/* Solid band along the bottom of each step card; the status badge sits half above it, half in it */
+#knowledge-articles .kf-step { padding-bottom: 46px; overflow: visible; }
+#knowledge-articles .kf-step::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22px; border-radius: 0 0 8px 8px; }
+#knowledge-articles .kf-step.ai::after { background: #ffb3dd; }
+#knowledge-articles .kf-step.hu::after { background: #a1a1aa; }
+#knowledge-articles .kf-step.end::after { background: #1f9d55; }
+#knowledge-articles .kf-badge { z-index: 1; bottom: 6px; width: 32px; height: 32px; }
+#knowledge-articles .kf-badge::after { inset: 7px; }
+#knowledge-articles .kf-badge.q { background: #71717a; box-shadow: 0 0 0 3px #ececee; }
+#knowledge-articles .kf-badge.ok { background: #1f9d55; box-shadow: 0 0 0 3px #e3f5ec; }
+/* Knowledge articles results: Spark UI pattern, hero stat on the left, three secondary stats beside it */
+@media (min-width: 901px) {
+  #knowledge-articles .stats.k3 { grid-template-columns: 1.4fr repeat(3, 1fr); align-items: center; }
+  #knowledge-articles .stats.k3 > div:first-child { grid-row: auto; }
+}
+@media (min-width: 901px) { #knowledge-articles .stats.k3 { grid-template-columns: 1.4fr repeat(4, 1fr); } }
+/* Results: hero stat spans two rows; the four secondary stats in a 2 x 2 grid beside it (like Spark UI) */
+@media (min-width: 901px) {
+  #knowledge-articles .stats.k3 { grid-template-columns: 1.4fr repeat(2, 1fr); row-gap: 28px; align-items: start; }
+  #knowledge-articles .stats.k3 > div:first-child { grid-row: 1 / span 2; align-self: center; }
+}
+
+/* Isometric cubes sprinkled through the case studies (from the portfolio branding) */
+.article .article-inner { position: relative; }
+.article.cs .article-inner::before, #spark-ui .article-inner::before {
+  content: ""; position: absolute; top: 4px; right: 0; width: 132px; height: 96px; pointer-events: none;
+  background: url(../img/cubes.svg) center / contain no-repeat; }
+.article .related-title { position: relative; }
+.article .related-title::after {
+  content: ""; position: absolute; right: 0; bottom: 4px; width: 58px; height: 45px; pointer-events: none;
+  background: url(../img/cubes-pair.svg) center / contain no-repeat; }
+@media (max-width: 900px) { .article.cs .article-inner::before, #spark-ui .article-inner::before { width: 88px; height: 64px; } }
+.article.cs .article-inner::before, #spark-ui .article-inner::before { top: 0; width: 100px; height: 72px; }
+/* Design Sandbox "In use": same pattern as Spark UI / knowledge articles results */
+@media (min-width: 901px) {
+  #design-sandbox .stats.k3 { grid-template-columns: 1.4fr repeat(2, 1fr); row-gap: 28px; align-items: start; }
+  #design-sandbox .stats.k3 > div:first-child { grid-row: 1 / span 2; align-self: center; }
+  #design-sandbox .stats.k3 > div:nth-child(2) { grid-column: span 2; }
+}
+@media (min-width: 901px) { #design-sandbox .stats.k3 > div:nth-child(2) { grid-column: auto; } }
+/* Fixed sprinkles replaced by js/cubes.js (randomized per page) */
+.article.cs .article-inner::before, #spark-ui .article-inner::before, .article .related-title::after { display: none; }
+
+/* Logo position: 56px from the left, 35px from the top (56 / 1.618, golden ratio). Was 32px. */
+.logo-bar .wrap { padding-top: 35px; }
+/* Keep case study titles centred on the pink line under the logo (it moved down 3px) */
+@media (min-width: 901px) { :is(#spark-ui, .article.cs) h1 { margin-top: -13.6px; } }
+/* Logo 36px from the top (was 35); main content moves down by the same 1px so titles stay on the pink line */
+.logo-bar .wrap { padding-top: 36px; }
+@media (min-width: 901px) { .article-inner { padding-top: 97px; } }
