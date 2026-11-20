@@ -132,7 +132,7 @@ function loginPage({ next = "/", error = "" } = {}) {
   <section class="card" id="signin">
     <svg class="logo" viewBox="0 0 118.5 56.875" role="img" aria-label="Nikola Pejcic"><path d="M51.5 0V56.875H37.8281L17.7109 21.4844V56.875H4V0H17.7109L37.8281 35.3906V0H51.5Z" fill="#1B1F26" fill-opacity="0.72"/><rect x="59.5" y="43.875" width="13" height="13" fill="#FF29A9"/><rect x="80.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.5"/><rect x="101.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.2"/></svg>
     <h1>Welcome</h1>
-    <p class="lead">This portfolio is shared by invitation. Enter the password I sent you.</p>
+    <p class="lead">This portfolio is shared by invitation. Enter the password you were given.</p>
     ${error === "wrong" ? `<p class="error" role="alert">That password didn’t work. Check the email or resume I sent you, or request access below.</p>` : ""}
     ${error === "limit" ? `<p class="error" role="alert">Too many attempts. Please wait a minute and try again.</p>` : ""}
     <form method="post" action="/__login">
@@ -142,7 +142,7 @@ function loginPage({ next = "/", error = "" } = {}) {
       <input id="p" name="password" type="password" autocomplete="current-password" autocapitalize="none" spellcheck="false" required autofocus>
       <button class="primary" type="submit">Sign in</button>
     </form>
-    <p class="switch">Don’t have the details? <button class="link" type="button" data-show="request">Request access</button></p>
+    <p class="switch">Don’t have the password? <button class="link" type="button" data-show="request">Request access</button></p>
   </section>
 
   <section class="card" id="request" hidden>
