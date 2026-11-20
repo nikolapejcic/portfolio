@@ -56,7 +56,7 @@ function loginPage({ next = "/", error = false } = {}) {
   body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 40px 20px;
          font: 400 16px/24px "IBM Plex Sans", system-ui, sans-serif; color: var(--ink); background: #fafafa; }
   .wrap { width: 100%; max-width: 420px; }
-  .logo { display: block; width: 72px; height: auto; margin: 0 0 32px; }
+  .logo { display: block; width: 56px; height: auto; margin: 0 0 28px; }
   .card { background: #fff; border: 1px solid #ececee; border-radius: 10px; padding: 32px; }
   .tag { font: 500 12px/16px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--pink); margin: 0 0 8px; }
   h1 { font: 600 26px/34px "IBM Plex Sans", sans-serif; margin: 0 0 8px; }
@@ -77,16 +77,15 @@ function loginPage({ next = "/", error = false } = {}) {
   .done-mark { width: 40px; height: 40px; border-radius: 50%; background: #edf7ef; display: grid; place-items: center; margin: 0 0 16px; }
   .small { font-size: 14px; line-height: 20px; color: var(--grey); margin: 0; }
   .small a { color: var(--grey); }
-  .foot { font-size: 13px; color: var(--grey); margin: 24px 0 0; }
+  .foot { font-size: 13px; color: var(--grey); margin: 24px 0 0; text-align: center; }
   .foot a { color: var(--grey); }
   [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 <main class="wrap">
-  <svg class="logo" viewBox="0 0 118.5 56.875" role="img" aria-label="Nikola Pejcic"><path d="M51.5 0V56.875H37.8281L17.7109 21.4844V56.875H4V0H17.7109L37.8281 35.3906V0H51.5Z" fill="#1B1F26" fill-opacity="0.72"/><rect x="59.5" y="43.875" width="13" height="13" fill="#FF29A9"/><rect x="80.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.5"/><rect x="101.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.2"/></svg>
-
   <section class="card" id="signin">
+    <svg class="logo" viewBox="0 0 118.5 56.875" role="img" aria-label="Nikola Pejcic"><path d="M51.5 0V56.875H37.8281L17.7109 21.4844V56.875H4V0H17.7109L37.8281 35.3906V0H51.5Z" fill="#1B1F26" fill-opacity="0.72"/><rect x="59.5" y="43.875" width="13" height="13" fill="#FF29A9"/><rect x="80.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.5"/><rect x="101.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.2"/></svg>
     <h1>Welcome</h1>
     <p class="lead">This portfolio is shared by invitation. Sign in with the details I sent you.</p>
     ${error ? `<p class="error" role="alert">That username or password didn’t work. Check the email I sent you, or request access below.</p>` : ""}
@@ -102,6 +101,7 @@ function loginPage({ next = "/", error = false } = {}) {
   </section>
 
   <section class="card" id="request" hidden>
+    <svg class="logo" viewBox="0 0 118.5 56.875" role="img" aria-label="Nikola Pejcic"><path d="M51.5 0V56.875H37.8281L17.7109 21.4844V56.875H4V0H17.7109L37.8281 35.3906V0H51.5Z" fill="#1B1F26" fill-opacity="0.72"/><rect x="59.5" y="43.875" width="13" height="13" fill="#FF29A9"/><rect x="80.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.5"/><rect x="101.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.2"/></svg>
     <p class="tag">Request access</p>
     <h1>Get the login details</h1>
     <p class="lead">Leave your email and a short note, and I’ll send you a username and password.</p>
@@ -116,6 +116,7 @@ function loginPage({ next = "/", error = false } = {}) {
   </section>
 
   <section class="card" id="sent" hidden>
+    <svg class="logo" viewBox="0 0 118.5 56.875" role="img" aria-label="Nikola Pejcic"><path d="M51.5 0V56.875H37.8281L17.7109 21.4844V56.875H4V0H17.7109L37.8281 35.3906V0H51.5Z" fill="#1B1F26" fill-opacity="0.72"/><rect x="59.5" y="43.875" width="13" height="13" fill="#FF29A9"/><rect x="80.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.5"/><rect x="101.5" y="43.875" width="13" height="13" fill="#FF29A9" fill-opacity="0.2"/></svg>
     <div class="done-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#418b4e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     <h1>Almost there</h1>
     <p class="lead">Your email app should open with the request. Send it, and I’ll email the login details to <b id="sentTo"></b>.</p>
