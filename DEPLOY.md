@@ -1,10 +1,12 @@
 # Deploying the portfolio (password protected)
 
-Last updated: 2026-11-19
+Last updated: 2026-11-19 (login page)
 
 Hosting: Cloudflare Workers (free), code in a private GitHub repo.
 Only the `v2-figma` folder is published (see `wrangler.jsonc`). `worker/index.js`
-asks for a username and password before any page or image loads.
+shows a branded login page before any page or image loads, and remembers a signed-in
+visitor for 30 days (cookie). "Request access" opens the visitor's email app, addressed
+to nikola.pejcic.to@gmail.com.
 (`functions/_middleware.js` is the same gate for the older Cloudflare Pages setup.)
 
 ## One-time setup (about 10 minutes)
@@ -30,10 +32,10 @@ Project → Settings → Variables and Secrets → Add → type **Secret**:
 When the free daily limit (100,000 requests) is used up, the site stops serving; it never opens without the login.
 
 ### 4. Check it
-- Open the .pages.dev address in a private window: it should ask for a login.
-- Wrong password → asked again. Right one → site loads, images too.
+- Open the site address in a private window: it should show the login page.
+- Wrong password → error message. Right one → site loads, images too.
 
 ## Day to day
 - Edit, then `git add -A && git commit -m "…" && git push`. Cloudflare redeploys in about a minute.
-- Change the password: Cloudflare → project → Settings → Variables and Secrets → edit `SITE_PASS`.
+- Change the password: Cloudflare → project → Settings → Variables and Secrets → edit `SITE_PASS`. This signs everyone out.
 - Optional: add your own domain under Custom domains.
