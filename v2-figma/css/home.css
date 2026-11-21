@@ -1506,3 +1506,104 @@ body.reading .featured { transform: translateY(8px); }
 #knowledge-articles .kf-step.hu small::after, #knowledge-articles .kf-step.end small::after { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font: 500 10px/14px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
 #knowledge-articles .kf-step.hu:not(.end) small::after { content: "✓ Approved"; color: #52525b; }
 #knowledge-articles .kf-step.end small::after { content: "✓ Published"; color: #1f9d55; }
+
+/* Discovery process case study: "From opportunity to development".
+   The full process as a horizontal board that scrolls sideways.
+   Built on the case-study type tokens; out-of-scope (downstream) work is greyed out. */
+#discovery-process .dp { --gate: #b4b4b8; margin: 32px 0 56px; }
+#discovery-process .dp p { padding-bottom: 0; max-width: none; }
+#discovery-process .dp .tag { display: inline-block; font: var(--label); letter-spacing: .06em; text-transform: uppercase; color: var(--pink); background: #ffe6f4; padding: 3px 6px; border-radius: 2px; margin: 0 2px 6px 0; }
+
+/* roles: PM / Design / Eng, the lead in solid pink */
+#discovery-process .dp .role { display: inline-block; font: 500 11px/16px "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .06em; text-transform: uppercase; color: #8a8a8a; background: #f2f2f2; padding: 2px 6px; border-radius: 2px; }
+#discovery-process .dp .role.on { color: #fff; background: var(--pink); }
+
+/* legend */
+#discovery-process .dp .legend { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 8px; }
+#discovery-process .dp .legend .hint { margin-left: 12px; font: var(--label); letter-spacing: .06em; text-transform: uppercase; color: var(--t-g500); }
+#discovery-process .dp .legend .lg { display: flex; align-items: center; gap: 8px; font: var(--label); letter-spacing: .06em; text-transform: uppercase; color: var(--t-g500); }
+#discovery-process .dp .legend .tag { margin: 0; }
+
+/* gate label chip */
+#discovery-process .dp .gl-l .gl-n { margin-inline-end: 4px; font: 600 10px/14px "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; color: #fff; }
+
+#discovery-process .dp .ph-h { font: 700 32px/1 "Big Shoulders Display", "IBM Plex Sans", sans-serif; color: #1b1f26; padding-bottom: 10px; border-bottom: 3px solid #1b1f26; margin-bottom: 14px; }
+
+/* board: phases left to right, gates as full-height lines; scrolls sideways */
+#discovery-process .dp .board-wrap { overflow-x: auto; margin-top: 24px; padding-bottom: 16px; scrollbar-width: thin; scrollbar-color: #ccc transparent; }
+#discovery-process .dp .board-wrap:focus-visible { outline: 2px solid var(--pink); outline-offset: 4px; }
+#discovery-process .dp .board { display: grid; grid-auto-flow: column; grid-template-rows: repeat(8, auto); width: max-content; }
+/* rows: 1 phase heading · 2 number · 3 title + roles · 4 description · 5 question · 6 activities · 7 artifacts · 8 continuous discovery */
+#discovery-process .dp .ph { grid-row: 1 / -1; display: grid; grid-template-rows: subgrid; }
+#discovery-process .dp .ph-h { margin-bottom: 20px; }
+#discovery-process .dp .sts { grid-row: 2 / -1; display: grid; grid-template-rows: subgrid; grid-auto-flow: column; column-gap: 32px; }
+#discovery-process .dp .st { grid-row: 1 / -1; display: grid; grid-template-rows: subgrid; width: 260px; }
+#discovery-process .dp .st .cols { display: contents; }
+#discovery-process .dp .st .title, #discovery-process .dp .st .desc { align-self: start; }
+#discovery-process .dp .st .q { align-self: start; }
+#discovery-process .dp .num { font: 300 32px/38px var(--sans); color: var(--pink); font-variant-numeric: tabular-nums; margin-bottom: 6px; }
+#discovery-process .dp .title { margin: 0 0 12px; }
+#discovery-process .dp .st h3 { font: 600 20px/28px var(--sans); color: var(--t-ink); margin: 0 0 8px; }
+#discovery-process .dp .roles { display: flex; gap: 4px; }
+#discovery-process .dp .desc { font: 400 15px/23px var(--sans); color: var(--t-g700); margin: 0 0 12px; }
+#discovery-process .dp .q { position: relative; font: 500 17px/26px var(--sans); color: var(--t-ink); text-align: center; background: #ffe0f1; border-radius: 14px; padding: 16px 18px; margin: 0 0 30px; }
+#discovery-process .dp .q::after { content: ""; position: absolute; left: 28px; bottom: -10px; border-style: solid; border-width: 10px 14px 0 0; border-color: #ffe0f1 transparent transparent transparent; }
+#discovery-process .dp .q mark { color: inherit; background: none; padding: 0; }
+#discovery-process .dp .cols > div { margin-bottom: 16px; }
+#discovery-process .dp .cols h4, #discovery-process .dp .cd h4 { font: var(--label); letter-spacing: .06em; text-transform: uppercase; color: var(--t-g500); margin: 0 0 8px; }
+#discovery-process .dp .cols ul { list-style: none; margin: 0; padding: 0; }
+#discovery-process .dp .cols li { position: relative; padding-left: 16px; font: 400 14px/22px var(--sans); color: var(--t-g700); }
+#discovery-process .dp .cols li::before { content: ""; position: absolute; left: 0; top: 11px; width: 6px; height: 1px; background: #bbb; }
+#discovery-process .dp .keys { margin-bottom: 4px; }
+#discovery-process .dp .cd { margin-top: 0; }
+#discovery-process .dp .cd p { font: 400 14px/22px var(--sans); color: var(--t-g700); margin: 0; }
+
+/* gate on the board: grey full-height line, label near the top */
+#discovery-process .dp .gl { grid-row: 1 / -1; width: 28px; margin: 0 20px; display: flex; justify-content: center; background: linear-gradient(var(--gate), var(--gate)) center / 2px 100% no-repeat; }
+#discovery-process .dp .gl-l .gl-q { font: inherit; color: inherit; }
+#discovery-process .dp .gl-l { align-self: center; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; background: #5a5d62; border-radius: 2px; padding: 10px 4px; font: 400 12px/14px var(--sans); color: #d4d4d8; }
+/* Design → Build line: dotted and greyed; marks where pre-development work ends */
+#discovery-process .dp .gl.plain { background: radial-gradient(circle, #c9c9cd 1.2px, transparent 1.7px) center top / 4px 7px repeat-y; }
+
+/* the board runs to the right edge of the page; the text column stays where it is */
+#discovery-process { --bleed: max(48px, calc(100vw - var(--main-left) - var(--main-w))); }
+@media (min-width: 901px) {
+  #discovery-process.article { right: calc(-1 * var(--bleed)); padding-right: var(--bleed); }
+}
+#discovery-process .dp .board-wrap { margin-right: calc(-1 * var(--bleed)); padding-right: 48px; }
+#discovery-process .dp .legend { margin-right: calc(24px - var(--bleed)); }
+
+/* planned next: downstream steps, greyed, in order */
+#discovery-process .dp .board-wrap { padding-top: 26px; margin-top: 0; }
+#discovery-process .dp .out { grid-row: 1 / -1; position: relative; display: grid; grid-template-rows: subgrid; grid-auto-flow: column; margin-left: 0; }
+#discovery-process .dp .st.sm + .st.sm { padding-left: 24px; background: radial-gradient(circle, #ccc 1px, transparent 1.5px) left top / 3px 6px repeat-y; }
+#discovery-process .dp .st.sm .sn { display: block; font: 500 11px/16px "IBM Plex Mono", ui-monospace, monospace; color: #b4b4b8; margin-bottom: 4px; }
+#discovery-process .dp .ph.out .ph-h { color: #b4b4b8; border-bottom: 3px solid #e4e4e7; }
+#discovery-process .dp .st.sm { display: block; width: 180px; padding-top: 4px; box-sizing: content-box; }
+#discovery-process .dp .st.sm h3 { font: 600 15px/22px var(--sans); color: #9a9ca1; margin: 0 0 4px; }
+#discovery-process .dp .st.sm p { font: 400 14px/21px var(--sans); color: #a7a9ae; margin: 0; }
+
+#discovery-process .dp .gl.plain .gl-l { background: #fff; padding: 8px 0; color: #9a9ca1; font: 400 12px/14px var(--sans); }
+
+/* the two gates, as the site's two-card compare block */
+#discovery-process .dp-gates { margin-top: 8px; }
+#discovery-process .dp-gates b { font-size: 24px; line-height: 32px; }
+
+/* "What makes the process work" section: four principles, 2 x 2, each under a hairline */
+#discovery-process .dp-principles { margin: 0 0 56px; }
+#discovery-process .dp-principles .pr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+#discovery-process .dp-principles .pr-grid > div { border-top: 1px solid #eee; padding-top: 18px; }
+#discovery-process .dp-principles b { display: block; font: 600 18px/26px var(--sans); color: var(--t-ink); margin-bottom: 4px; }
+#discovery-process .dp-principles p { font: 400 16px/25px var(--sans); color: var(--t-g700); padding: 0 0 24px; max-width: none; }
+
+@media (max-width: 900px) {
+  #discovery-process .dp .board-wrap { margin-right: -24px; padding-right: 24px; }
+  #discovery-process .dp .legend { margin-right: 0; }
+  #discovery-process .dp-principles .pr-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  #discovery-process .dp .legend { justify-content: flex-start; }
+  #discovery-process .dp .st { width: 240px; }
+  #discovery-process .dp .sts { column-gap: 24px; }
+  #discovery-process .dp .gl { margin: 0 12px; }
+}
