@@ -1645,3 +1645,11 @@ body.reading .featured { transform: translateY(8px); }
 #design-team ul.rituals { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 14px; }
 #design-team ul.rituals li strong { display: block; font-weight: 600; }
 #design-team ul.rituals li .rd { display: block; color: var(--grey); font-size: 16px; line-height: 24px; }
+.mx tr.mx-sub th { padding-top: 14px; font-size: 13px; font-weight: 600; color: var(--ink); border-bottom: 1px solid #eee; }
+#design-team .vrows { display: grid; gap: 16px; }
+#design-team .vrow { display: grid; grid-template-columns: 300px 1fr; gap: 24px; align-items: center; }
+#design-team .vtxt b { display: block; font-size: 18px; line-height: 26px; font-weight: 600; margin-bottom: 6px; }
+#design-team .vtxt p { margin: 0; font-size: 16px; line-height: 24px; color: var(--grey); }
+@media (max-width: 720px) { #design-team .vrow { grid-template-columns: 1fr; gap: 12px; } }
+#design-team .vtxt .vnum { color: var(--pink); font-weight: 300; margin-right: 10px; }
+@media (min-width: 901px) { #design-team.article .stats { grid-template-columns: 1.4fr repeat(2, 1fr); } }
