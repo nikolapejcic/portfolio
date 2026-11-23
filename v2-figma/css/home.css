@@ -1607,3 +1607,41 @@ body.reading .featured { transform: translateY(8px); }
   #discovery-process .dp .sts { column-gap: 24px; }
   #discovery-process .dp .gl { margin: 0 12px; }
 }
+
+/* Design team case study: visual placeholders (draft) */
+.cs-ph { display: flex; align-items: center; justify-content: center; min-height: 220px; padding: 24px; border: 1px dashed #c9c9d1; border-radius: 6px; background: #fafafc; color: #6b6b76; font-size: 14px; line-height: 20px; text-align: center; }
+/* Design team case study: visuals */
+#design-team .vphases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+#design-team .vp { border: 1px solid #f2d6e7; border-radius: 6px; padding: 16px; background: #fff8fc; }
+#design-team .vp-n { display: block; font-size: 13px; line-height: 18px; letter-spacing: .08em; text-transform: uppercase; color: var(--pink); margin-bottom: 8px; }
+#design-team .vp svg { display: block; width: 100%; height: auto; }
+#design-team .vp p { font-size: 15px; line-height: 22px; margin: 8px 0 0; color: var(--ink); }
+#design-team .vg { fill: #ffd6ee; }
+#design-team .vd { fill: #ff8fd0; }
+#design-team .vx { fill: #b3126f; }
+#design-team .vl, #design-team .vm { fill: var(--ink); }
+#design-team .vt { font-size: 13px; fill: var(--ink); text-anchor: middle; }
+#design-team .vt.vs { text-anchor: start; }
+.mx-wrap { overflow-x: auto; }
+.mx { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 14px; line-height: 20px; }
+.mx th, .mx td { padding: 10px 12px; border-bottom: 1px solid #eee; text-align: left; vertical-align: top; }
+.mx thead th { font-weight: 600; color: var(--pink); border-bottom: 1px solid var(--pink); }
+.mx small { display: block; font-size: 12px; font-weight: 400; color: var(--grey); text-transform: none; }
+.mx tbody th { font-weight: 600; width: 16%; }
+#design-team .dt-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 40px; }
+#design-team .dt-cards > div { border-top: 1px solid var(--pink); padding-top: 12px; }
+#design-team .dt-cards b { display: block; font-size: 24px; line-height: 32px; font-weight: 500; }
+#design-team .dt-cards span { display: block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--pink); margin: 2px 0 8px; }
+#design-team .dt-cards p { font-size: 15px; line-height: 22px; margin: 0; }
+@media (max-width: 720px) { #design-team .vphases, #design-team .dt-cards { grid-template-columns: 1fr; } }
+#design-team .diagram-fig .caption { display: flex; justify-content: space-between; gap: 24px; }
+#design-team .diagram-fig .caption span:last-child:not(:first-child) { white-space: nowrap; }
+.mx tr.mx-stage th { padding-top: 20px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--pink); font-weight: 500; border-bottom: 1px solid #f2d6e7; }
+.mx.mx-full td { font-size: 13px; line-height: 19px; }
+#design-team .vo { fill: #fff0c2; }
+#design-team .vod { fill: #ffc21a; }
+#design-team .vt.vgrey { fill: var(--grey); font-size: 12px; }
+#design-team .cs-h3 { font-size: 20px; line-height: 28px; font-weight: 600; margin: 32px 0 12px; }
+#design-team ul.rituals { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 14px; }
+#design-team ul.rituals li strong { display: block; font-weight: 600; }
+#design-team ul.rituals li .rd { display: block; color: var(--grey); font-size: 16px; line-height: 24px; }
